@@ -1,0 +1,76 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+ext {
+    javaLanguageLevel = '1.6'
+    generatedMapperSourcesDir = "${buildDir}/generated-src/mapstruct/main"
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.6'
+}
+
+sourceCompatibility = rootProject.javaLanguageLevel
+
+configurations {
+    mapstruct
+}
+
+dependencies {
+    compile( 'org.mapstruct:mapstruct:1.0.0-SNAPSHOT' )
+
+    testCompile( 'org.testng:testng:6.3.1' )
+    testCompile ( 'org.easytesting:fest-assert:1.4' )
+
+    mapstruct( 'org.mapstruct:mapstruct-processor:1.0.0-SNAPSHOT' )
+}
+
+sourceSets.main {
+    ext.originalJavaSrcDirs = java.srcDirs
+    java.srcDir "${generatedMapperSourcesDir}"
+}
+
+task generateMainMapperClasses(type: JavaCompile) {
+    //class output dir, required by JavaCompile
+    ext.aptDumpDir = file( "${buildDir}/tmp/apt/mapstruct" )
+    destinationDir = aptDumpDir
+
+    classpath = compileJava.classpath + configurations.mapstruct
+    source = sourceSets.main.originalJavaSrcDirs
+    ext.sourceDestDir = file ( "$generatedMapperSourcesDir" )
+
+    options.define(
+        compilerArgs: [
+            "-nowarn",
+            "-proc:only",
+            "-encoding", "UTF-8",
+            "-processor", "org.mapstruct.ap.MappingProcessor",
+            "-s", sourceDestDir.absolutePath,
+            "-source", rootProject.javaLanguageLevel,
+            "-target", rootProject.javaLanguageLevel,
+        ]
+    );
+
+    inputs.dir source
+    outputs.dir generatedMapperSourcesDir;
+    doFirst {
+         sourceDestDir.mkdirs()
+    }
+    doLast {
+        aptDumpDir.delete()
+    }
+}
+
+compileJava.dependsOn generateMainMapperClasses
+compileJava.options.define(compilerArgs: ["-proc:none", "-encoding", "UTF-8"])
+compileTestJava.options.define(compilerArgs: ["-proc:none", "-encoding", "UTF-8"])
+
+test {
+    useTestNG()
+}

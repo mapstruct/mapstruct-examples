@@ -10,6 +10,9 @@ ext {
 repositories {
     mavenCentral()
     mavenLocal()
+
+    //required for MapStruct snapshots only
+    mavenRepo name: 'sonatype-oss', url: 'https://oss.sonatype.org/content/groups/public'
 }
 
 task wrapper(type: Wrapper) {

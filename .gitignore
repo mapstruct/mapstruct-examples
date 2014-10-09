@@ -12,7 +12,8 @@
 .idea
 
 # Build
-/*/target
+/target
+/*/*/target
 test-output
 /*/build
 /*/bin

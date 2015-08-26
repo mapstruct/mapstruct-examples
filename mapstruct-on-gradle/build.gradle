@@ -26,12 +26,12 @@ configurations {
 }
 
 dependencies {
-    compile( 'org.mapstruct:mapstruct:1.0.0-SNAPSHOT' )
+    compile( 'org.mapstruct:mapstruct:1.0.0.CR1' )
 
     testCompile( 'org.testng:testng:6.3.1' )
     testCompile ( 'org.easytesting:fest-assert:1.4' )
 
-    mapstruct( 'org.mapstruct:mapstruct-processor:1.0.0-SNAPSHOT' )
+    mapstruct( 'org.mapstruct:mapstruct-processor:1.0.0.CR1' )
 }
 
 sourceSets.main {

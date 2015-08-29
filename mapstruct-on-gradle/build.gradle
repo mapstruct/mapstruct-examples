@@ -12,11 +12,13 @@ repositories {
     mavenLocal()
 
     //required for MapStruct snapshots only
-    mavenRepo name: 'sonatype-oss', url: 'https://oss.sonatype.org/content/groups/public'
+    maven {
+        url 'https://oss.sonatype.org/content/groups/public'
+    }
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.12'
+    gradleVersion = '2.6'
 }
 
 sourceCompatibility = rootProject.javaLanguageLevel

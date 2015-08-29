@@ -1,11 +1,10 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-
-ext {
-    javaLanguageLevel = '1.8'
-    generatedMapperSourcesDir = "${buildDir}/generated-src/mapstruct/main"
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'idea'
 }
+
+def generatedMapperSourcesDir = "${buildDir}/generated-src/mapstruct/main"
 
 repositories {
     mavenCentral()
@@ -21,7 +20,7 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.6'
 }
 
-sourceCompatibility = rootProject.javaLanguageLevel
+sourceCompatibility = JavaVersion.VERSION_1_8
 
 configurations {
     mapstruct
@@ -38,7 +37,7 @@ dependencies {
 
 sourceSets.main {
     ext.originalJavaSrcDirs = java.srcDirs
-    java.srcDir "${generatedMapperSourcesDir}"
+    java.srcDir generatedMapperSourcesDir
 }
 
 task generateMainMapperClasses(type: JavaCompile) {
@@ -48,7 +47,7 @@ task generateMainMapperClasses(type: JavaCompile) {
 
     classpath = compileJava.classpath + configurations.mapstruct
     source = sourceSets.main.originalJavaSrcDirs
-    ext.sourceDestDir = file ( "$generatedMapperSourcesDir" )
+    ext.sourceDestDir = file ( generatedMapperSourcesDir )
 
     options.define(
         compilerArgs: [
@@ -57,8 +56,8 @@ task generateMainMapperClasses(type: JavaCompile) {
             "-encoding", "UTF-8",
             "-processor", "org.mapstruct.ap.MappingProcessor",
             "-s", sourceDestDir.absolutePath,
-            "-source", rootProject.javaLanguageLevel,
-            "-target", rootProject.javaLanguageLevel,
+            "-source", sourceCompatibility.toString(),
+            "-target", sourceCompatibility.toString(),
         ]
     );
 

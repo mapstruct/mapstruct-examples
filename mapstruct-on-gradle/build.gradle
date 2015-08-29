@@ -24,17 +24,12 @@ task wrapper(type: Wrapper) {
 sourceCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
-    compile( 'org.mapstruct:mapstruct-jdk8:1.0.0.CR2' )
+    compile 'org.mapstruct:mapstruct-jdk8:1.0.0.CR2'
 
-    testCompile( 'org.testng:testng:6.3.1' )
-    testCompile ( 'org.easytesting:fest-assert:1.4' )
+    testCompile 'org.testng:testng:6.3.1',
+            'org.easytesting:fest-assert:1.4'
 
-    apt( 'org.mapstruct:mapstruct-processor:1.0.0.CR2' )
-}
-
-sourceSets.main {
-    ext.originalJavaSrcDirs = java.srcDirs
-    java.srcDir generatedMapperSourcesDir
+    apt 'org.mapstruct:mapstruct-processor:1.0.0.CR2'
 }
 
 test {

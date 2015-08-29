@@ -37,7 +37,7 @@ public class ConversionTest {
         Target target = SourceTargetMapper.INSTANCE.sourceToTarget( source );
 
         assertThat( target ).isNotNull();
-        assertThat( target.getFoo() ).isEqualTo( Long.valueOf( 42 ) );
+        assertThat( target.getFoo() ).isEqualTo(42L);
         assertThat( target.getBar() ).isEqualTo( 23 );
         assertThat( target.getZip() ).isEqualTo( "73" );
     }
@@ -48,7 +48,7 @@ public class ConversionTest {
         Target target = SourceTargetMapper.INSTANCE.sourceToTarget( source );
 
         assertThat( target ).isNotNull();
-        assertThat( target.getFoo() ).isEqualTo( Long.valueOf( 0 ) );
+        assertThat( target.getFoo() ).isEqualTo(0L);
         assertThat( target.getBar() ).isEqualTo( 0 );
         assertThat( target.getZip() ).isEqualTo( "0" );
     }
@@ -62,7 +62,7 @@ public class ConversionTest {
         Target target = SourceTargetMapper.INSTANCE.sourceToTarget( source );
 
         assertThat( target ).isNotNull();
-        assertThat( target.getBaz() ).isEqualTo( Long.valueOf( 42 ) );
+        assertThat( target.getBaz() ).isEqualTo(42L);
         assertThat( target.getQax() ).isEqualTo( 23 );
     }
 

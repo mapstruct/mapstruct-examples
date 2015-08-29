@@ -3,7 +3,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 
 ext {
-    javaLanguageLevel = '1.6'
+    javaLanguageLevel = '1.8'
     generatedMapperSourcesDir = "${buildDir}/generated-src/mapstruct/main"
 }
 
@@ -16,7 +16,7 @@ repositories {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.6'
+    gradleVersion = '1.12'
 }
 
 sourceCompatibility = rootProject.javaLanguageLevel
@@ -26,12 +26,12 @@ configurations {
 }
 
 dependencies {
-    compile( 'org.mapstruct:mapstruct:1.0.0.CR1' )
+    compile( 'org.mapstruct:mapstruct-jdk8:1.0.0.CR2' )
 
     testCompile( 'org.testng:testng:6.3.1' )
     testCompile ( 'org.easytesting:fest-assert:1.4' )
 
-    mapstruct( 'org.mapstruct:mapstruct-processor:1.0.0.CR1' )
+    mapstruct( 'org.mapstruct:mapstruct-processor:1.0.0.CR2' )
 }
 
 sourceSets.main {

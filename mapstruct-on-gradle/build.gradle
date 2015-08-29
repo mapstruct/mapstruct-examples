@@ -5,8 +5,6 @@ plugins {
     id 'net.ltgt.apt' version '0.3'
 }
 
-def generatedMapperSourcesDir = "${buildDir}/generated-src/mapstruct/main"
-
 repositories {
     mavenCentral()
     mavenLocal()

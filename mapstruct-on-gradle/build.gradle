@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'eclipse'
     id 'idea'
+    id 'net.ltgt.apt' version '0.3'
 }
 
 def generatedMapperSourcesDir = "${buildDir}/generated-src/mapstruct/main"
@@ -22,58 +23,19 @@ task wrapper(type: Wrapper) {
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 
-configurations {
-    mapstruct
-}
-
 dependencies {
     compile( 'org.mapstruct:mapstruct-jdk8:1.0.0.CR2' )
 
     testCompile( 'org.testng:testng:6.3.1' )
     testCompile ( 'org.easytesting:fest-assert:1.4' )
 
-    mapstruct( 'org.mapstruct:mapstruct-processor:1.0.0.CR2' )
+    apt( 'org.mapstruct:mapstruct-processor:1.0.0.CR2' )
 }
 
 sourceSets.main {
     ext.originalJavaSrcDirs = java.srcDirs
     java.srcDir generatedMapperSourcesDir
 }
-
-task generateMainMapperClasses(type: JavaCompile) {
-    //class output dir, required by JavaCompile
-    ext.aptDumpDir = file( "${buildDir}/tmp/apt/mapstruct" )
-    destinationDir = aptDumpDir
-
-    classpath = compileJava.classpath + configurations.mapstruct
-    source = sourceSets.main.originalJavaSrcDirs
-    ext.sourceDestDir = file ( generatedMapperSourcesDir )
-
-    options.define(
-        compilerArgs: [
-            "-nowarn",
-            "-proc:only",
-            "-encoding", "UTF-8",
-            "-processor", "org.mapstruct.ap.MappingProcessor",
-            "-s", sourceDestDir.absolutePath,
-            "-source", sourceCompatibility.toString(),
-            "-target", sourceCompatibility.toString(),
-        ]
-    );
-
-    inputs.dir source
-    outputs.dir generatedMapperSourcesDir;
-    doFirst {
-         sourceDestDir.mkdirs()
-    }
-    doLast {
-        aptDumpDir.delete()
-    }
-}
-
-compileJava.dependsOn generateMainMapperClasses
-compileJava.options.define(compilerArgs: ["-proc:none", "-encoding", "UTF-8"])
-compileTestJava.options.define(compilerArgs: ["-proc:none", "-encoding", "UTF-8"])
 
 test {
     useTestNG()

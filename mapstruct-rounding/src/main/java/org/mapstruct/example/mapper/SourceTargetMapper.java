@@ -36,9 +36,9 @@ public interface SourceTargetMapper {
     SourceTargetMapper MAPPER = Mappers.getMapper( SourceTargetMapper.class );
 
     @Mappings( {
-        @Mapping( source = "bd2", target = "bd2", qualifiedBy = Fraction2.class ),
-        @Mapping( source = "bd3", target = "bd3", qualifiedBy = Fraction3.class ),
-        @Mapping( source = "bdUnConstrained", target = "bdUnConstrained" )
+        @Mapping( target = "bd2", qualifiedBy = Fraction2.class ),
+        @Mapping( target = "bd3", qualifiedBy = Fraction3.class ),
+        @Mapping( target = "bdUnConstrained" )
     } )
     Target toTarget( Source s );
 }

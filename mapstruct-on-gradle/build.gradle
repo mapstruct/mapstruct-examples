@@ -22,12 +22,12 @@ task wrapper(type: Wrapper) {
 sourceCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
-    compile 'org.mapstruct:mapstruct-jdk8:1.0.0.CR2'
+    compile 'org.mapstruct:mapstruct-jdk8:1.0.0.Final'
 
     testCompile 'org.testng:testng:6.3.1',
             'org.easytesting:fest-assert:1.4'
 
-    apt 'org.mapstruct:mapstruct-processor:1.0.0.CR2'
+    apt 'org.mapstruct:mapstruct-processor:1.0.0.Final'
 }
 
 test {

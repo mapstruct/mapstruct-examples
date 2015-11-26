@@ -20,3 +20,4 @@ test-output
 
 # Gradle
 /*/.gradle
+/maptruct-iterable-to-non-iterable/target/

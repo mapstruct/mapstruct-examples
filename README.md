@@ -8,7 +8,7 @@ Currently, the following examples exist:
 * _mapstruct-lombok_: Shows how to use MapStruct together with Lombok; To build the example project, run `mvn clean install` on the command line
 * _mapstruct-iterable-non-iterable_: Shows how by means of a mapper util class conversions can be made from an iterable- to its non-iterable element
 * _mapstruct-rounding_: Shows how by means of a mapper util class and qualifiers roundings can be carried out on Numbers
-* _mapstruct-examples-updatemethods-1: Shows use of update methods, updating of existing target objects
+* _mapstruct-examples-updatemethods-1_: Shows how to update an existing target object
 
 ## License
 

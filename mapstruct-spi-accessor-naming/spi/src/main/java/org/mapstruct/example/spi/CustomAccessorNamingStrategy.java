@@ -25,21 +25,19 @@ import javax.lang.model.type.TypeKind;
 
 import org.mapstruct.ap.spi.AccessorNamingStrategy;
 import org.mapstruct.ap.spi.DefaultAccessorNamingStrategy;
-import org.mapstruct.ap.spi.MethodType;
 
 /**
  * A custom {@link AccessorNamingStrategy} recognizing getters in the form of {@code property()} and setters in the
  * form of {@code withProperty(value)}.
  *
- * @author Gunnar Morling
+ * @author Sjaak Derksen
  */
 public class CustomAccessorNamingStrategy extends DefaultAccessorNamingStrategy {
-
 
     @Override
     public boolean isGetterMethod(ExecutableElement method) {
         String methodName = method.getSimpleName().toString();
-        return !methodName.startsWith( "with") && method.getReturnType().getKind() != TypeKind.VOID;
+        return !methodName.startsWith( "with" ) && method.getReturnType().getKind() != TypeKind.VOID;
     }
 
     @Override
@@ -53,5 +51,4 @@ public class CustomAccessorNamingStrategy extends DefaultAccessorNamingStrategy 
         String methodName = getterOrSetterMethod.getSimpleName().toString();
         return Introspector.decapitalize( methodName.startsWith( "with" ) ? methodName.substring(  4 ) : methodName );
     }
-
 }

@@ -35,6 +35,7 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
+            <optional>true</optional>
         </dependency>
 
     </dependencies>

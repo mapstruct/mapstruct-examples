@@ -9,6 +9,7 @@ Currently, the following examples exist:
 * _mapstruct-iterable-non-iterable_: Shows how by means of a mapper util class conversions can be made from an iterable- to its non-iterable element
 * _mapstruct-rounding_: Shows how by means of a mapper util class and qualifiers roundings can be carried out on Numbers
 * _mapstruct-examples-updatemethods-1_: Shows how to update an existing target object
+* _mapstruct-spi-accessor-naming_: Example on how to use the Service Provider Interface (SPI) for a custom accessor naming strategy.
 
 ## License
 

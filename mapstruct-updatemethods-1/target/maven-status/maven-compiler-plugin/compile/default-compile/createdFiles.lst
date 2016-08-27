@@ -1,0 +1,4 @@
+org/mapstruct/example/mapper/SourceTargetMapper.class
+org/mapstruct/example/mapper/SourceTargetMapperImpl.class
+org/mapstruct/example/dto/MammalEntity.class
+org/mapstruct/example/dto/MammalDto.class

@@ -12,12 +12,10 @@
 .idea
 
 # Build
-/target
-/*/*/target
+target
 test-output
 /*/build
 /*/bin
 
 # Gradle
-/*/.gradle
-/maptruct-iterable-to-non-iterable/target/
+.gradle

@@ -1,5 +1,3 @@
-package org.mapstruct.example.dto;
-
 /**
  *  Copyright 2012-2016 Gunnar Morling (http://www.gunnarmorling.de/)
  *  and/or other contributors as indicated by the @authors tag. See the
@@ -18,7 +16,7 @@ package org.mapstruct.example.dto;
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-
+package org.mapstruct.example.dto;
 
 /**
  * @author Gunnar Morling

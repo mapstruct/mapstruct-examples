@@ -21,29 +21,28 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.mapstruct.examples.spi.accessornaming</groupId>
-    <artifactId>parent</artifactId>
+
+    <groupId>org.mapstruct.examples.spi</groupId>
+    <artifactId>accessornaming-parent</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <name>Accessor Naming Strategy - Parent</name>
 
     <properties>
         <org.mapstruct.version>1.1.0-SNAPSHOT</org.mapstruct.version>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <modules>
-        <module>spi</module>
-        <module>source</module>
+        <module>spi-impl</module>
+        <module>usage</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.mapstruct</groupId>
-                <artifactId>mapstruct</artifactId>
+                <artifactId>mapstruct-jdk8</artifactId>
                 <version>${org.mapstruct.version}</version>
             </dependency>
 
@@ -53,66 +52,23 @@
                 <version>${org.mapstruct.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>spi</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
            <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
     <build>
-
         <pluginManagement>
             <plugins>
-                <!-- leave annotation processing to the maven-processor-plugin to avoid duplicates -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.5.1</version>
-                    <configuration>
-                        <proc>none</proc>
-                    </configuration>
-                </plugin>
-
-                <plugin>
-                    <groupId>org.bsc.maven</groupId>
-                    <artifactId>maven-processor-plugin</artifactId>
-                    <version>2.2.4</version>
-                    <configuration>
-                        <defaultOutputDirectory>
-                            ${project.build.directory}/generated-sources
-                        </defaultOutputDirectory>
-                        <processors>
-                            <processor>org.mapstruct.ap.MappingProcessor</processor>
-                        </processors>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>process</id>
-                            <phase>generate-sources</phase>
-                            <goals>
-                                <goal>process</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.mapstruct</groupId>
-                            <artifactId>mapstruct-processor</artifactId>
-                            <version>${org.mapstruct.version}</version>
-                        </dependency>
-                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
     </build>
-
 </project>

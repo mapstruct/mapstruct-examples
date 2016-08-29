@@ -21,42 +21,20 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>src</artifactId>
-    <version>1.0.0</version>
+
     <parent>
-        <groupId>org.mapstruct.examples.spi.accessornaming</groupId>
-        <artifactId>parent</artifactId>
+        <groupId>org.mapstruct.examples.spi</groupId>
+        <artifactId>accessornaming-parent</artifactId>
         <version>1.0.0</version>
     </parent>
-    <name>Accessor Naming Strategy - Source</name>
+
+    <artifactId>accessornaming-spi-impl</artifactId>
+    <version>1.0.0</version>
 
     <dependencies>
         <dependency>
             <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
+            <artifactId>mapstruct-processor</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>spi</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
-
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.bsc.maven</groupId>
-                <artifactId>maven-processor-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
-
 </project>

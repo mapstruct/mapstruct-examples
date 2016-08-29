@@ -1,5 +1,5 @@
 /**
- *  Copyright 2012-2015 Gunnar Morling (http://www.gunnarmorling.de/)
+ *  Copyright 2012-2016 Gunnar Morling (http://www.gunnarmorling.de/)
  *  and/or other contributors as indicated by the @authors tag. See the
  *  copyright.txt file in the distribution for a full listing of all
  *  contributors.
@@ -24,20 +24,15 @@ import org.mapstruct.example.dto.GolfPlayer;
 import org.mapstruct.example.dto.GolfPlayerDto;
 import org.mapstruct.example.mapper.GolfPlayerMapper;
 
-
 /**
- *
  * @author Sjaak Derksen
  */
 public class SpiTest {
-
-
     /**
      * Test if everything is working when sources are present
      */
     @Test
     public void test() {
-
         GolfPlayer golfPlayer1 = new GolfPlayer();
         golfPlayer1.withName( "Tiger Woods" ).withHandicap( 12 );
 
@@ -48,5 +43,4 @@ public class SpiTest {
         Assert.assertEquals( "Tiger Woods", golfPlayer2.name() );
         Assert.assertEquals( 12L, golfPlayer2.handicap(), 0 );
     }
-
 }

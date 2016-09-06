@@ -1,22 +1,15 @@
 plugins {
     id 'java'
-    id 'eclipse'
-    id 'idea'
-    id 'net.ltgt.apt' version '0.3'
+    id 'net.ltgt.apt' version '0.8'
 }
 
 repositories {
     mavenCentral()
     mavenLocal()
-
-    //required for MapStruct snapshots only
-    maven {
-        url 'https://oss.sonatype.org/content/groups/public'
-    }
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.6'
+    gradleVersion = '2.14.1'
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8

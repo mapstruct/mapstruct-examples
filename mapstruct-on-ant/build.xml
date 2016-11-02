@@ -72,7 +72,11 @@
             classpathref="main.classpath"
             includeantruntime="false">
             <compilerarg line="-processorpath ${processorpath}"/>
-            <compilerarg line="-processor org.mapstruct.ap.MappingProcessor"/>
+
+            <!-- Specify the processor name explicitly if there are several ones around and you only want to execute MapStruct -->
+            <!--
+                <compilerarg line="-processor org.mapstruct.ap.MappingProcessor"/>
+            -->
             <compilerarg line="-s ${generatedsources.dir}"/>
         </javac>
     </target>

@@ -33,7 +33,6 @@ public interface OrderItemMapper {
 
     OrderItemMapper MAPPER = Mappers.getMapper(OrderItemMapper.class);
 
-
     OrderItem toOrder(OrderItemDto orderItemDto);
 
     @InheritInverseConfiguration

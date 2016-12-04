@@ -53,7 +53,7 @@ public class CustomerMapperTest {
         assertThat( customer.getId() ).isEqualTo( 10 );
         assertThat( customer.getName() ).isEqualTo( "Filip" );
         assertThat( customer.getOrderItems() )
-            .extracting( OrderItem::getName, OrderItem::getQuantity )
+            .extracting( "name", "quantity" )
             .containsExactly( tuple( "Table", 2L ) );
     }
 
@@ -73,8 +73,7 @@ public class CustomerMapperTest {
         assertThat( customerDto.id ).isEqualTo( 10 );
         assertThat( customerDto.customerName ).isEqualTo( "Filip" );
         assertThat( customerDto.orders )
-            .extracting( input -> input.name, input -> input.quantity )
+            .extracting( "name", "quantity" )
             .containsExactly( tuple( "Table", 2L ) );
     }
-
 }

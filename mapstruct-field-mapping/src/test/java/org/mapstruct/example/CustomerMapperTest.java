@@ -42,7 +42,7 @@ public class CustomerMapperTest {
 
         CustomerDto customerDto = new CustomerDto();
         customerDto.id = 10L;
-        customerDto.name = "Filip";
+        customerDto.customerName = "Filip";
         OrderItemDto order1 = new OrderItemDto();
         order1.name = "Table";
         order1.quantity = 2L;
@@ -71,7 +71,7 @@ public class CustomerMapperTest {
         CustomerDto customerDto = CustomerMapper.MAPPER.fromCustomer( customer );
 
         assertThat( customerDto.id ).isEqualTo( 10 );
-        assertThat( customerDto.name ).isEqualTo( "Filip" );
+        assertThat( customerDto.customerName ).isEqualTo( "Filip" );
         assertThat( customerDto.orders )
             .extracting( input -> input.name, input -> input.quantity )
             .containsExactly( tuple( "Table", 2L ) );

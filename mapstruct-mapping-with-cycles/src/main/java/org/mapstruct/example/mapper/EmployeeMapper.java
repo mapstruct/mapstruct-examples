@@ -18,10 +18,10 @@
  */
 package org.mapstruct.example.mapper;
 
+import org.mapstruct.Context;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
 import org.mapstruct.example.dto.Employee;
 import org.mapstruct.example.dto.EmployeeDto;
 import org.mapstruct.factory.Mappers;
@@ -29,16 +29,14 @@ import org.mapstruct.factory.Mappers;
 /**
  * @author Filip Hrisafov
  */
-@Mapper(uses = { CycleAvoidanceMapper.class })
+@Mapper
 public interface EmployeeMapper {
 
     EmployeeMapper MAPPER = Mappers.getMapper( EmployeeMapper.class );
 
-    @Mappings({
-        @Mapping(source = "employeeName", target = "name")
-    })
-    Employee toEmployee(EmployeeDto employeeDto);
+    @Mapping(source = "employeeName", target = "name")
+    Employee toEmployee(EmployeeDto employeeDto, @Context CycleAvoidingMappingContext context);
 
     @InheritInverseConfiguration
-    EmployeeDto fromEmployee(Employee employee);
+    EmployeeDto fromEmployee(Employee employee, @Context CycleAvoidingMappingContext context);
 }

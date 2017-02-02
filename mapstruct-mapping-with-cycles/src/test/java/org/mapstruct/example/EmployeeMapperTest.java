@@ -26,6 +26,7 @@ import java.util.List;
 import org.junit.Test;
 import org.mapstruct.example.dto.Employee;
 import org.mapstruct.example.dto.EmployeeDto;
+import org.mapstruct.example.mapper.CycleAvoidingMappingContext;
 import org.mapstruct.example.mapper.EmployeeMapper;
 
 /**
@@ -43,7 +44,7 @@ public class EmployeeMapperTest {
         EmployeeDto member2 = employeeDto( "Member2", teamLeader );
         teamLeader.setTeam( Arrays.asList( member1, member2 ) );
 
-        Employee teamLead = EmployeeMapper.MAPPER.toEmployee( teamLeader );
+        Employee teamLead = EmployeeMapper.MAPPER.toEmployee( teamLeader, new CycleAvoidingMappingContext() );
 
         assertThat( teamLead ).isNotNull();
         assertThat( teamLead.getReportsTo() ).isNull();
@@ -68,7 +69,7 @@ public class EmployeeMapperTest {
         Employee member2 = employee( "Member2", teamLeader );
         teamLeader.setTeam( Arrays.asList( member1, member2 ) );
 
-        EmployeeDto teamLead = EmployeeMapper.MAPPER.fromEmployee( teamLeader );
+        EmployeeDto teamLead = EmployeeMapper.MAPPER.fromEmployee( teamLeader, new CycleAvoidingMappingContext() );
 
         assertThat( teamLead ).isNotNull();
         assertThat( teamLead.getReportsTo() ).isNull();

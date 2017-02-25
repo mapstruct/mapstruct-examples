@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'net.ltgt.apt' version '0.8'
+    id 'net.ltgt.apt' version '0.9'
 }
 
 repositories {
@@ -12,15 +12,19 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.14.1'
 }
 
+ext {
+    mapstructVersion = "1.1.0.Final"
+}
+
 sourceCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
-    compile 'org.mapstruct:mapstruct-jdk8:1.0.0.Final'
+    compile "org.mapstruct:mapstruct-jdk8:${mapstructVersion}"
 
     testCompile 'org.testng:testng:6.3.1',
             'org.easytesting:fest-assert:1.4'
 
-    apt 'org.mapstruct:mapstruct-processor:1.0.0.Final'
+    apt "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 }
 
 test {

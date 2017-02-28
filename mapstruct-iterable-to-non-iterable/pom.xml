@@ -30,20 +30,20 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
-            <version>1.0.0.Final</version>
+            <version>1.2.0.Beta1</version>
         </dependency>
 
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
-            <version>1.0.0.Final</version>
+            <version>1.2.0.Beta1</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
 

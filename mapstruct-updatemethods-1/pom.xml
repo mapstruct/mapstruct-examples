@@ -26,7 +26,7 @@
     <version>1.0.0</version>
 
     <properties>
-        <org.mapstruct.version>1.0.0.Final</org.mapstruct.version>
+        <org.mapstruct.version>1.2.0-SNAPSHOT</org.mapstruct.version>
     </properties>
 
     <dependencies>
@@ -72,6 +72,15 @@
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>process</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <!-- This execution is needed if you want the processor plugin to
+                        generate the mappers in the test sources. -->
+                        <id>process-test</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>process-test</goal>
                         </goals>
                     </execution>
                 </executions>

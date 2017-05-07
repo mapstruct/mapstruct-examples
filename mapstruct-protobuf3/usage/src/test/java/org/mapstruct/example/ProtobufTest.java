@@ -28,13 +28,14 @@ import org.mapstruct.example.protobuf.UserProtos.UserDTO;
 /**
  * @author Thomas Kratz
  */
-public class SpiTest {
+public class ProtobufTest {
     /**
      * Test if everything is working when sources are present
      */
     @Test
     public void test() {
         User user = new User();
+        user.setId(""); // this is not exisiting in the proto. we don't know how to handle nulls yet
         user.setEmail("test");
         user.getPermissions().add(Permission.ADMIN);
 
@@ -42,7 +43,7 @@ public class SpiTest {
 
         User back = UserMapper.INSTANCE.map(dto.build());
 
-        Assert.assertNull(back.getId());
+        Assert.assertEquals("",back.getId());
         Assert.assertEquals("test", back.getEmail());
         Assert.assertTrue(back.getPermissions().contains(Permission.ADMIN));
     }

@@ -47,4 +47,20 @@ public class ProtobufTest {
         Assert.assertEquals("test", back.getEmail());
         Assert.assertTrue(back.getPermissions().contains(Permission.ADMIN));
     }
+
+    @Test(expected = NullPointerException.class)
+    public void testNulls() {
+        User user = new User();
+        // if id is null everything is broken
+        user.setEmail("test");
+        user.getPermissions().add(Permission.ADMIN);
+
+        UserDTO.Builder dto = UserMapper.INSTANCE.map(user);
+
+//        User back = UserMapper.INSTANCE.map(dto.build());
+//
+//        Assert.assertEquals("",back.getId());
+//        Assert.assertEquals("test", back.getEmail());
+//        Assert.assertTrue(back.getPermissions().contains(Permission.ADMIN));
+    }
 }

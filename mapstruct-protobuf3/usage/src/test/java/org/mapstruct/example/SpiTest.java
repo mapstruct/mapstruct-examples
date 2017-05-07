@@ -21,8 +21,9 @@ package org.mapstruct.example;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mapstruct.example.mapper.UserMapper;
-import org.mapstruct.example.protobuf.GolfPlayer;
-import org.mapstruct.example.protobuf.GolfPlayerDto;
+import org.mapstruct.example.protobuf.Permission;
+import org.mapstruct.example.protobuf.User;
+import org.mapstruct.example.protobuf.UserProtos.UserDTO;
 
 /**
  * @author Sjaak Derksen
@@ -33,14 +34,15 @@ public class SpiTest {
      */
     @Test
     public void test() {
-        GolfPlayer golfPlayer1 = new GolfPlayer();
-        golfPlayer1.withName("Tiger Woods").withHandicap(12);
+        User user = new User();
+        user.setEmail("test");
+        user.getPermissions().add(Permission.ADMIN);
 
-        GolfPlayerDto dto = UserMapper.INSTANCE.toDto(golfPlayer1);
+        UserDTO.Builder dto = UserMapper.INSTANCE.map(user);
 
-        GolfPlayer golfPlayer2 = UserMapper.INSTANCE.toPlayer(dto);
+        User back = UserMapper.INSTANCE.map(dto.build());
 
-        Assert.assertEquals("Tiger Woods", golfPlayer2.name());
-        Assert.assertEquals(12L, golfPlayer2.handicap(), 0);
+        Assert.assertEquals("test", back.getEmail());
+        Assert.assertTrue(back.getPermissions().contains(Permission.ADMIN));
     }
 }

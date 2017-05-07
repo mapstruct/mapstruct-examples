@@ -16,27 +16,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.mapstruct.example.mapper;
+package org.mapstruct.example.dto;
 
-import org.mapstruct.Context;
-import org.mapstruct.InheritInverseConfiguration;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.example.dto.Employee;
-import org.mapstruct.example.dto.EmployeeDto;
-import org.mapstruct.factory.Mappers;
+import java.util.List;
 
 /**
  * @author Filip Hrisafov
  */
-@Mapper
-public interface EmployeeMapper {
+public class Employee {
 
-    EmployeeMapper MAPPER = Mappers.getMapper( EmployeeMapper.class );
+    private String name;
+    private Employee reportsTo;
+    private List<Employee> team;
 
-    @Mapping(source = "employeeName", target = "name")
-    Employee toEmployee(EmployeeDto employeeDto, @Context CycleAvoidingMappingContext context);
+    public String getName() {
+        return name;
+    }
 
-    @InheritInverseConfiguration
-    EmployeeDto fromEmployee(Employee employee, @Context CycleAvoidingMappingContext context);
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Employee> getTeam() {
+        return team;
+    }
+
+    public void setTeam(List<Employee> team) {
+        this.team = team;
+    }
+
+    public Employee getReportsTo() {
+        return reportsTo;
+    }
+
+    public void setReportsTo(Employee reportsTo) {
+        this.reportsTo = reportsTo;
+    }
 }

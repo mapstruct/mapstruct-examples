@@ -16,20 +16,31 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.mapstruct.example.mapper;
+package org.mapstruct.example.dto;
 
-import org.mapstruct.example.dto.GolfPlayerDto;
-import org.mapstruct.example.dto.GolfPlayer;
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
+/**
+ * @author Gunnar Morling
+ */
+public class GolfPlayer {
 
-@Mapper
-public interface GolfPlayerMapper {
+    private double handicap;
+    private String name;
 
-    GolfPlayerMapper INSTANCE = Mappers.getMapper( GolfPlayerMapper.class );
+    public double handicap() {
+        return handicap;
+    }
 
-    GolfPlayerDto toDto(GolfPlayer player);
+    public GolfPlayer withHandicap(double handicap) {
+        this.handicap = handicap;
+        return this;
+    }
 
-    GolfPlayer toPlayer(GolfPlayerDto player);
+    public String name() {
+        return name;
+    }
 
+    public GolfPlayer withName(String name) {
+        this.name = name;
+        return this;
+    }
 }

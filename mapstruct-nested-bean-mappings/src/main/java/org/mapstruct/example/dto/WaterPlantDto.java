@@ -16,20 +16,22 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.mapstruct.example.mapper;
+package org.mapstruct.example.dto;
 
-import org.mapstruct.example.dto.GolfPlayerDto;
-import org.mapstruct.example.dto.GolfPlayer;
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
+/**
+ *
+ * @author Sjaak Derksen
+ */
+public class WaterPlantDto {
 
-@Mapper
-public interface GolfPlayerMapper {
+    private String kind;
 
-    GolfPlayerMapper INSTANCE = Mappers.getMapper( GolfPlayerMapper.class );
+    public String getKind() {
+        return kind;
+    }
 
-    GolfPlayerDto toDto(GolfPlayer player);
-
-    GolfPlayer toPlayer(GolfPlayerDto player);
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 
 }

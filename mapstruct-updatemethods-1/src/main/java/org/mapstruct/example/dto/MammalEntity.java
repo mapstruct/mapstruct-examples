@@ -16,20 +16,33 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.mapstruct.example.mapper;
+package org.mapstruct.example.dto;
 
-import org.mapstruct.example.dto.GolfPlayerDto;
-import org.mapstruct.example.dto.GolfPlayer;
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
 
-@Mapper
-public interface GolfPlayerMapper {
+/**
+ *
+ * @author Sjaak Derksen
+ */
+public class MammalEntity {
 
-    GolfPlayerMapper INSTANCE = Mappers.getMapper( GolfPlayerMapper.class );
+    private Long numberOfLegs;
+    private Long numberOfStomachs;
 
-    GolfPlayerDto toDto(GolfPlayer player);
+    public Long getNumberOfLegs() {
+        return numberOfLegs;
+    }
 
-    GolfPlayer toPlayer(GolfPlayerDto player);
+    public void setNumberOfLegs(Long numberOfLegs) {
+        this.numberOfLegs = numberOfLegs;
+    }
+
+    public Long getNumberOfStomachs() {
+        return numberOfStomachs;
+    }
+
+    public void setNumberOfStomachs(Long numberOfStomachs) {
+        this.numberOfStomachs = numberOfStomachs;
+    }
+
 
 }

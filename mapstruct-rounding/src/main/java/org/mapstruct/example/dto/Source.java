@@ -16,20 +16,44 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.mapstruct.example.mapper;
+package org.mapstruct.example.dto;
 
-import org.mapstruct.example.dto.GolfPlayerDto;
-import org.mapstruct.example.dto.GolfPlayer;
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
+import java.math.BigDecimal;
 
-@Mapper
-public interface GolfPlayerMapper {
+/**
+ *
+ * @author Sjaak Derksen
+ */
+public class Source {
 
-    GolfPlayerMapper INSTANCE = Mappers.getMapper( GolfPlayerMapper.class );
+    private BigDecimal bd2;
 
-    GolfPlayerDto toDto(GolfPlayer player);
+    private BigDecimal bd3;
 
-    GolfPlayer toPlayer(GolfPlayerDto player);
+    private BigDecimal bdUnConstrained;
+
+    public BigDecimal getBd2() {
+        return bd2;
+    }
+
+    public void setBd2(BigDecimal bd2) {
+        this.bd2 = bd2;
+    }
+
+    public BigDecimal getBd3() {
+        return bd3;
+    }
+
+    public void setBd3(BigDecimal bd3) {
+        this.bd3 = bd3;
+    }
+
+    public BigDecimal getBdUnConstrained() {
+        return bdUnConstrained;
+    }
+
+    public void setBdUnConstrained(BigDecimal bdUnConstrained) {
+        this.bdUnConstrained = bdUnConstrained;
+    }
 
 }

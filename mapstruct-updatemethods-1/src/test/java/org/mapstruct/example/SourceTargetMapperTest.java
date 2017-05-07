@@ -18,12 +18,11 @@
  */
 package org.mapstruct.example;
 
-import org.junit.Test;
-import org.mapstruct.example.mapper.SourceTargetMapper;
-import org.mapstruct.example.protobuf.MammalDto;
-import org.mapstruct.example.protobuf.MammalEntity;
-
 import static org.fest.assertions.Assertions.assertThat;
+import org.mapstruct.example.mapper.SourceTargetMapper;
+import org.junit.Test;
+import org.mapstruct.example.dto.MammalDto;
+import org.mapstruct.example.dto.MammalEntity;
 
 
 /**

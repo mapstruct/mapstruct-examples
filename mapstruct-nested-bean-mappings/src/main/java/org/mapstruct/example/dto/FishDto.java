@@ -16,20 +16,32 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.mapstruct.example.mapper;
+package org.mapstruct.example.dto;
 
-import org.mapstruct.example.dto.GolfPlayerDto;
-import org.mapstruct.example.dto.GolfPlayer;
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
+/**
+ *
+ * @author Sjaak Derksen
+ */
+public class FishDto {
 
-@Mapper
-public interface GolfPlayerMapper {
+    private String kind;
 
-    GolfPlayerMapper INSTANCE = Mappers.getMapper( GolfPlayerMapper.class );
+    // make sure that mapping on name does not happen based on name mapping
+    private String name;
 
-    GolfPlayerDto toDto(GolfPlayer player);
+    public String getKind() {
+        return kind;
+    }
 
-    GolfPlayer toPlayer(GolfPlayerDto player);
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

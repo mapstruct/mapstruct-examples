@@ -18,14 +18,12 @@
  */
 package org.mapstruct.example;
 
-import org.junit.Test;
-import org.mapstruct.example.mapper.SourceTargetMapper;
-import org.mapstruct.example.protobuf.Source;
-import org.mapstruct.example.protobuf.Target;
-
 import java.math.BigDecimal;
-
+import org.mapstruct.example.mapper.SourceTargetMapper;
+import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import org.mapstruct.example.dto.Source;
+import org.mapstruct.example.dto.Target;
 
 /**
  *

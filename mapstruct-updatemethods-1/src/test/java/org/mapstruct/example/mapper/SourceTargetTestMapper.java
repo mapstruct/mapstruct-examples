@@ -23,8 +23,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.Mappings;
-import org.mapstruct.example.protobuf.MammalDto;
-import org.mapstruct.example.protobuf.MammalEntity;
+import org.mapstruct.example.dto.MammalDto;
+import org.mapstruct.example.dto.MammalEntity;
 import org.mapstruct.factory.Mappers;
 
 /**

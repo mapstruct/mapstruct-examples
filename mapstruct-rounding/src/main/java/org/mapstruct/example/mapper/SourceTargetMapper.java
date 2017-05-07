@@ -22,11 +22,11 @@ package org.mapstruct.example.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
+import org.mapstruct.example.dto.Source;
+import org.mapstruct.example.dto.Target;
 import org.mapstruct.example.mapper.util.RoundingUtil;
 import org.mapstruct.example.mapper.util.RoundingUtil.Fraction2;
 import org.mapstruct.example.mapper.util.RoundingUtil.Fraction3;
-import org.mapstruct.example.protobuf.Source;
-import org.mapstruct.example.protobuf.Target;
 import org.mapstruct.factory.Mappers;
 
 

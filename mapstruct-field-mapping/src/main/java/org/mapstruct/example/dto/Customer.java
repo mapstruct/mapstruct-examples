@@ -16,27 +16,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.mapstruct.example.mapper;
+package org.mapstruct.example.dto;
 
-import org.mapstruct.Context;
-import org.mapstruct.InheritInverseConfiguration;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.example.dto.Employee;
-import org.mapstruct.example.dto.EmployeeDto;
-import org.mapstruct.factory.Mappers;
+import java.util.Collection;
 
 /**
  * @author Filip Hrisafov
  */
-@Mapper
-public interface EmployeeMapper {
+public class Customer {
 
-    EmployeeMapper MAPPER = Mappers.getMapper( EmployeeMapper.class );
+    private Long id;
+    private String name;
+    private Collection<OrderItem> orderItems;
 
-    @Mapping(source = "employeeName", target = "name")
-    Employee toEmployee(EmployeeDto employeeDto, @Context CycleAvoidingMappingContext context);
+    public Long getId() {
+        return id;
+    }
 
-    @InheritInverseConfiguration
-    EmployeeDto fromEmployee(Employee employee, @Context CycleAvoidingMappingContext context);
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Collection<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(Collection<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
 }

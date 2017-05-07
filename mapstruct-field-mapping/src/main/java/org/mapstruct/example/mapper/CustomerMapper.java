@@ -22,8 +22,8 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import org.mapstruct.example.protobuf.Customer;
-import org.mapstruct.example.protobuf.CustomerDto;
+import org.mapstruct.example.dto.Customer;
+import org.mapstruct.example.dto.CustomerDto;
 import org.mapstruct.factory.Mappers;
 
 /**

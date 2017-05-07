@@ -18,16 +18,16 @@
  */
 package org.mapstruct.example;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.Test;
+import org.mapstruct.example.mapper.CycleAvoidingMappingContext;
+import org.mapstruct.example.mapper.EmployeeMapper;
+import org.mapstruct.example.protobuf.Employee;
+import org.mapstruct.example.protobuf.EmployeeDto;
 
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Test;
-import org.mapstruct.example.dto.Employee;
-import org.mapstruct.example.dto.EmployeeDto;
-import org.mapstruct.example.mapper.CycleAvoidingMappingContext;
-import org.mapstruct.example.mapper.EmployeeMapper;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  *

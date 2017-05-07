@@ -18,18 +18,18 @@
  */
 package org.mapstruct.example;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.tuple;
+import org.junit.Test;
+import org.mapstruct.example.mapper.CustomerMapper;
+import org.mapstruct.example.protobuf.Customer;
+import org.mapstruct.example.protobuf.CustomerDto;
+import org.mapstruct.example.protobuf.OrderItem;
+import org.mapstruct.example.protobuf.OrderItemDto;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-import org.junit.Test;
-import org.mapstruct.example.dto.Customer;
-import org.mapstruct.example.dto.CustomerDto;
-import org.mapstruct.example.dto.OrderItem;
-import org.mapstruct.example.dto.OrderItemDto;
-import org.mapstruct.example.mapper.CustomerMapper;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.tuple;
 
 /**
  *

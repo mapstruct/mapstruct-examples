@@ -36,5 +36,6 @@
         <module>mapstruct-rounding</module>
         <module>mapstruct-spi-accessor-naming</module>
         <module>mapstruct-updatemethods-1</module>
+        <module>mapstruct-protobuf3</module>
     </modules>
 </project>

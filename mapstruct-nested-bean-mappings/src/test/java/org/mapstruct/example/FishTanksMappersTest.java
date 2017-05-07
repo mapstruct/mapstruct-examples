@@ -19,8 +19,6 @@
 package org.mapstruct.example;
 
 import org.junit.Test;
-import org.mapstruct.example.dto.FishTankDto;
-import org.mapstruct.example.dto.FishTankWithNestedDocumentDto;
 import org.mapstruct.example.mapper.FishTankMapper;
 import org.mapstruct.example.mapper.FishTankMapperConstant;
 import org.mapstruct.example.mapper.FishTankMapperExpression;
@@ -33,6 +31,8 @@ import org.mapstruct.example.model.Ornament;
 import org.mapstruct.example.model.WaterPlant;
 import org.mapstruct.example.model.WaterQuality;
 import org.mapstruct.example.model.WaterQualityReport;
+import org.mapstruct.example.protobuf.FishTankDto;
+import org.mapstruct.example.protobuf.FishTankWithNestedDocumentDto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -18,9 +18,9 @@
  */
 package org.mapstruct.example.mapper;
 
-import org.mapstruct.example.dto.GolfPlayerDto;
-import org.mapstruct.example.dto.GolfPlayer;
 import org.mapstruct.Mapper;
+import org.mapstruct.example.protobuf.GolfPlayer;
+import org.mapstruct.example.protobuf.GolfPlayerDto;
 import org.mapstruct.factory.Mappers;
 
 @Mapper

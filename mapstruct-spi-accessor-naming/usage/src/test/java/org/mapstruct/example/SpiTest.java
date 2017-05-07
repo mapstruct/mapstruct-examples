@@ -20,9 +20,9 @@ package org.mapstruct.example;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.mapstruct.example.dto.GolfPlayer;
-import org.mapstruct.example.dto.GolfPlayerDto;
 import org.mapstruct.example.mapper.GolfPlayerMapper;
+import org.mapstruct.example.protobuf.GolfPlayer;
+import org.mapstruct.example.protobuf.GolfPlayerDto;
 
 /**
  * @author Sjaak Derksen

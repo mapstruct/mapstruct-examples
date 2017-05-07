@@ -21,8 +21,8 @@ package org.mapstruct.example.mapper;
 
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
-import org.mapstruct.example.dto.OrderItem;
-import org.mapstruct.example.dto.OrderItemDto;
+import org.mapstruct.example.protobuf.OrderItem;
+import org.mapstruct.example.protobuf.OrderItemDto;
 import org.mapstruct.factory.Mappers;
 
 /**

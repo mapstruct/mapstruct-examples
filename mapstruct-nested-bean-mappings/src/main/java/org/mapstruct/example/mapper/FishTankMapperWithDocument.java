@@ -21,8 +21,8 @@ package org.mapstruct.example.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import org.mapstruct.example.dto.FishTankWithNestedDocumentDto;
 import org.mapstruct.example.model.FishTank;
+import org.mapstruct.example.protobuf.FishTankWithNestedDocumentDto;
 import org.mapstruct.factory.Mappers;
 
 /**

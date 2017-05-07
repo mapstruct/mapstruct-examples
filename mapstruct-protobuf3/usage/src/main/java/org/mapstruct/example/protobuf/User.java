@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by thomas on 07.05.17.
+ * @author Thomas Kratz
  */
 public class User {
 

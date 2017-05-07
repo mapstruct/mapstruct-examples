@@ -29,7 +29,9 @@ import org.mapstruct.example.protobuf.User;
 import org.mapstruct.example.protobuf.UserProtos.PermissionDTO;
 import org.mapstruct.example.protobuf.UserProtos.UserDTO;
 import org.mapstruct.factory.Mappers;
-
+/**
+ * @author Thomas Kratz
+ */
 @Mapper(uses = BuilderFactory.class, collectionMappingStrategy = CollectionMappingStrategy.ADDER_PREFERRED)
 public interface UserMapper {
 

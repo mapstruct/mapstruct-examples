@@ -26,7 +26,7 @@ import org.mapstruct.example.protobuf.User;
 import org.mapstruct.example.protobuf.UserProtos.UserDTO;
 
 /**
- * @author Sjaak Derksen
+ * @author Thomas Kratz
  */
 public class SpiTest {
     /**

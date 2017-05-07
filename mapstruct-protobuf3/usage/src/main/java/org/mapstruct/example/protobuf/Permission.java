@@ -1,7 +1,7 @@
 package org.mapstruct.example.protobuf;
 
 /**
- * Created by thomas on 07.05.17.
+ * @author Thomas Kratz
  */
 public enum Permission {
 

@@ -42,6 +42,7 @@ public class SpiTest {
 
         User back = UserMapper.INSTANCE.map(dto.build());
 
+        Assert.assertNull(back.getId());
         Assert.assertEquals("test", back.getEmail());
         Assert.assertTrue(back.getPermissions().contains(Permission.ADMIN));
     }

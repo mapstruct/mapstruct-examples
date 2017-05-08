@@ -22,6 +22,7 @@ import org.mapstruct.CollectionMappingStrategy;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
+import org.mapstruct.NullValueCheckStrategy;
 import org.mapstruct.ValueMapping;
 import org.mapstruct.example.mapper.UserMapper.BuilderFactory;
 import org.mapstruct.example.protobuf.Permission;
@@ -29,10 +30,13 @@ import org.mapstruct.example.protobuf.User;
 import org.mapstruct.example.protobuf.UserProtos.PermissionDTO;
 import org.mapstruct.example.protobuf.UserProtos.UserDTO;
 import org.mapstruct.factory.Mappers;
+
 /**
  * @author Thomas Kratz
  */
-@Mapper(uses = BuilderFactory.class, collectionMappingStrategy = CollectionMappingStrategy.ADDER_PREFERRED)
+@Mapper(uses = BuilderFactory.class,
+        collectionMappingStrategy = CollectionMappingStrategy.ADDER_PREFERRED,
+        nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
 public interface UserMapper {
 
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);

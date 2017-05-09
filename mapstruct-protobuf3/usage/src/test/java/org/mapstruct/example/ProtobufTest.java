@@ -41,9 +41,7 @@ public class ProtobufTest {
         user.getPermissions().add(Permission.ADMIN);
 
         UserDTO.Builder dto = UserMapper.INSTANCE.map(user);
-
         UserDTO deserialized = UserDTO.parseFrom(dto.build().toByteArray());
-
         User back = UserMapper.INSTANCE.map(deserialized);
 
         Assert.assertEquals("",back.getId());
@@ -60,9 +58,7 @@ public class ProtobufTest {
         user.getPermissions().add(Permission.ADMIN);
 
         UserDTO.Builder dto = UserMapper.INSTANCE.map(user);
-
         UserDTO deserialized = UserDTO.parseFrom(dto.build().toByteArray());
-
         User back = UserMapper.INSTANCE.map(deserialized);
 
         Assert.assertEquals("", back.getId());

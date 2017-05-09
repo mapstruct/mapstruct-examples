@@ -27,7 +27,6 @@ public class ProtobufAccessorNamingStrategy extends DefaultAccessorNamingStrateg
             if (superType != null && PROTOBUF_GENERATED_MESSAGE_V3.equals(superType.toString())) {
                 methodName += LIST_SUFFIX;
             }
-
         }
         return methodName;
     }

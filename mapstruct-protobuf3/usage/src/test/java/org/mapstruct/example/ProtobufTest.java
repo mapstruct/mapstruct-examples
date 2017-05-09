@@ -18,6 +18,7 @@
  */
 package org.mapstruct.example;
 
+import com.google.protobuf.InvalidProtocolBufferException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mapstruct.example.mapper.UserMapper;
@@ -33,7 +34,7 @@ public class ProtobufTest {
      * Test if everything is working when sources are present
      */
     @Test
-    public void test() {
+    public void test() throws InvalidProtocolBufferException {
         User user = new User();
         user.setId("");
         user.setEmail("test");
@@ -41,7 +42,9 @@ public class ProtobufTest {
 
         UserDTO.Builder dto = UserMapper.INSTANCE.map(user);
 
-        User back = UserMapper.INSTANCE.map(dto.build());
+        UserDTO deserialized = UserDTO.parseFrom(dto.build().toByteArray());
+
+        User back = UserMapper.INSTANCE.map(deserialized);
 
         Assert.assertEquals("",back.getId());
         Assert.assertEquals("test", back.getEmail());
@@ -50,7 +53,7 @@ public class ProtobufTest {
 
 
     @Test
-    public void testNulls() {
+    public void testNulls() throws InvalidProtocolBufferException {
         User user = new User();
         // if id is null we should get the default empty string
         user.setEmail("test");
@@ -58,7 +61,9 @@ public class ProtobufTest {
 
         UserDTO.Builder dto = UserMapper.INSTANCE.map(user);
 
-        User back = UserMapper.INSTANCE.map(dto.build());
+        UserDTO deserialized = UserDTO.parseFrom(dto.build().toByteArray());
+
+        User back = UserMapper.INSTANCE.map(deserialized);
 
         Assert.assertEquals("", back.getId());
         Assert.assertEquals("test", back.getEmail());

@@ -40,7 +40,7 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>3.2.0</version>
+            <version>${protobuf.java.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -55,7 +55,7 @@
             <extension>
                 <groupId>kr.motd.maven</groupId>
                 <artifactId>os-maven-plugin</artifactId>
-                <version>1.4.0.Final</version>
+                <version>${os.mavenplugin.version}</version>
             </extension>
         </extensions>
 
@@ -63,7 +63,7 @@
             <plugin>
                 <groupId>org.xolstice.maven.plugins</groupId>
                 <artifactId>protobuf-maven-plugin</artifactId>
-                <version>0.5.0</version>
+                <version>${protobuf.plugin.version}</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>

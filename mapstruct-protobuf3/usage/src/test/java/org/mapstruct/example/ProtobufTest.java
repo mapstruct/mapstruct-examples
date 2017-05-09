@@ -44,7 +44,7 @@ public class ProtobufTest {
         UserDTO deserialized = UserDTO.parseFrom(dto.build().toByteArray());
         User back = UserMapper.INSTANCE.map(deserialized);
 
-        Assert.assertEquals("",back.getId());
+        Assert.assertEquals("", back.getId());
         Assert.assertEquals("test", back.getEmail());
         Assert.assertTrue(back.getPermissions().contains(Permission.ADMIN));
     }

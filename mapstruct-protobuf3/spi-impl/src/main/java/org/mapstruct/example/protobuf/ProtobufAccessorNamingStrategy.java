@@ -19,7 +19,7 @@ public class ProtobufAccessorNamingStrategy extends DefaultAccessorNamingStrateg
     @Override
     public String getElementName(ExecutableElement adderMethod) {
 
-        String methodName = getPropertyName(adderMethod);
+        String methodName = super.getElementName(adderMethod);
         Element receiver = adderMethod.getEnclosingElement();
         if (receiver != null && receiver.getKind() == ElementKind.CLASS) {
             TypeElement type = (TypeElement) receiver;

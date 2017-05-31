@@ -28,7 +28,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <org.mapstruct.version>1.2.0.Beta1</org.mapstruct.version>
+        <org.mapstruct.version>1.2.0.Beta3</org.mapstruct.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>

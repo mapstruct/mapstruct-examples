@@ -27,7 +27,7 @@
     <version>1.0.0</version>
 
     <properties>
-        <org.mapstruct.version>1.2.0-SNAPSHOT</org.mapstruct.version>
+        <org.mapstruct.version>1.2.0.Beta3</org.mapstruct.version>
     </properties>
 
     <dependencies>

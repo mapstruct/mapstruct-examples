@@ -16,7 +16,7 @@
  limitations under the License.
 -->
 <project name="mapstruct-on-ant" default="build" basedir=".">
-    <property name="mapstruct.version" value="1.0.0.Final" />
+    <property name="mapstruct.version" value="1.2.0.Beta3" />
 
     <property name="src.main.dir" location="src/main/java" />
     <property name="src.test.dir" location="src/test/java" />

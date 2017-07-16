@@ -55,42 +55,20 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.bsc.maven</groupId>
-                <artifactId>maven-processor-plugin</artifactId>
-                <version>2.2.4</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
                 <configuration>
-                    <defaultOutputDirectory>
-                        ${project.build.directory}/generated-sources
-                    </defaultOutputDirectory>
-                    <processors>
-                        <processor>org.mapstruct.ap.MappingProcessor</processor>
-                    </processors>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${org.mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>process</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>process</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <!-- This execution is needed if you want the processor plugin to
-                        generate the mappers in the test sources. -->
-                        <id>process-test</id>
-                        <phase>generate-test-sources</phase>
-                        <goals>
-                            <goal>process-test</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.mapstruct</groupId>
-                        <artifactId>mapstruct-processor</artifactId>
-                        <version>${org.mapstruct.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>

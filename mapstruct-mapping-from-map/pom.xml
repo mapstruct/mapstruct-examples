@@ -26,7 +26,7 @@
     <version>1.0.0</version>
 
     <properties>
-        <org.mapstruct.version>1.2.0.Beta3</org.mapstruct.version>
+        <org.mapstruct.version>1.2.0.CR1</org.mapstruct.version>
     </properties>
 
     <dependencies>
@@ -44,6 +44,13 @@
              There is already an open issue for IntelliJ see https://youtrack.jetbrains.com/issue/IDEA-150621
             -->
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

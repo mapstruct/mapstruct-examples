@@ -15,6 +15,7 @@ Currently, the following examples exist:
 * _mapstruct-nested-bean-mappings_: Shows how to map object graphs via a main root method
 * _mapstruct-mapping-with-cycles_: Shows how to map object graphs that can contain cycles
 * _mapstruct-spi-accessor-naming_: Example on how to use the Service Provider Interface (SPI) for a custom accessor naming strategy.
+* _mapstruct-protobuf3_: Example on how to use protobuf3 with MapStruct
 
 ## License
 

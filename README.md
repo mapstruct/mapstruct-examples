@@ -16,6 +16,7 @@ Currently, the following examples exist:
 * _mapstruct-mapping-with-cycles_: Shows how to map object graphs that can contain cycles
 * _mapstruct-spi-accessor-naming_: Example on how to use the Service Provider Interface (SPI) for a custom accessor naming strategy.
 * _mapstruct-protobuf3_: Example on how to use protobuf3 with MapStruct
+* _mapstruct-kotlin: Example on how to use Mapstruct with Kotlin using KAPT (Kotlin Annotation Processing Tool)
 
 ## License
 

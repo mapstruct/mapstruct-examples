@@ -38,5 +38,6 @@
         <module>mapstruct-spi-accessor-naming</module>
         <module>mapstruct-protobuf3</module>
         <module>mapstruct-updatemethods-1</module>
+        <module>mapstruct-kotlin</module>
     </modules>
 </project>

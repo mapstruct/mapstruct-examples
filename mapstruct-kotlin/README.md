@@ -1,6 +1,6 @@
 # MapStruct with Kotlin
 
-Example usage of Mapstruct and Kotlin with JDK-8 Bytecode. This is achieved by using the [Kotlin Annotation Processing Tool (KAPT)](https://kotlinlang.org/docs/reference/kapt.html).
+Example usage of MapStruct and Kotlin with JDK-8 Bytecode. This is achieved by using the [Kotlin Annotation Processing Tool (KAPT)](https://kotlinlang.org/docs/reference/kapt.html).
 
 ## Code
 
@@ -59,7 +59,7 @@ Kotlin: https://kotlinlang.org/
 
 ## Maven Setup
 
-Add Mapstruct-JDK8 to your dependencies
+Add `mapstruct-jdk8` to your dependencies
 
 ```xml
 <dependency>

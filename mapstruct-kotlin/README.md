@@ -8,6 +8,7 @@ In this example we want to map between a Person (Model) and a PersonDto (DTO).
 
 ```kotlin
 data class Person(var firstName: String?, var lastName: String?, var phoneNumber: String?, var birthdate: LocalDate?) {
+    // Necessary for MapStruct
     constructor() : this(null, null, null, null)
 }
 ```

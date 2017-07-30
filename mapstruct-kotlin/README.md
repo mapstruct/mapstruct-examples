@@ -49,6 +49,21 @@ val personModel = converter.convertToModel(personDto)
 println(personModel)
 ```
 
+### Multiple Mappings
+
+As of Kotlin 1.1, repeated annotations are not supported. You have to wrap the Mapping-Annotation in a Mappings-Annotation.
+
+```kotlin
+@Mappings(
+            Mapping(source = "majorVersion", target = "major"),
+            Mapping(source = "minorVersion", target = "minor"),
+            Mapping(source = "patchVersion", target = "patch"),
+            Mapping(source = "normalVersion", target = "normal"),
+            Mapping(source = "preReleaseVersion", target = "preRelease")
+    )
+    fun convertToDto(version: Version): VersionDto
+```
+
 ## Further documentation
 
 Using kapt: https://kotlinlang.org/docs/reference/kapt.html

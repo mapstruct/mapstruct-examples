@@ -54,7 +54,7 @@ println(personModel)
 As of Kotlin 1.1, repeated annotations are not supported (see [KT-12794](https://youtrack.jetbrains.com/issue/KT-12794)). You have to wrap the Mapping-Annotation in a Mappings-Annotation.
 
 ```kotlin
-@Mappings(
+    @Mappings(
             Mapping(source = "majorVersion", target = "major"),
             Mapping(source = "minorVersion", target = "minor"),
             Mapping(source = "patchVersion", target = "patch"),

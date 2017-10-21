@@ -39,5 +39,6 @@
         <module>mapstruct-protobuf3</module>
         <module>mapstruct-updatemethods-1</module>
         <module>mapstruct-kotlin</module>
+        <module>mapstructnoniterabletoiterable</module>
     </modules>
 </project>

@@ -8,10 +8,7 @@ public class NonIterableToIterable {
 
     @ToList
     public <T> List<T> toList(T in) {
-        if (in != null) {
-            return Collections.singletonList(in);
-        } else {
-            return new ArrayList<T>();
-        }
+        if (in != null) return Collections.singletonList(in);
+        else return new ArrayList<T>();
     }
 }

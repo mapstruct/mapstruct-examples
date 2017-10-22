@@ -2,9 +2,6 @@ package com.mycompany.mapper;
 
 public class Main {
 
-    private Main() {
-    }
-
     public static void main(String[] args) {
         NonIterable nonIterable = new NonIterable();
         nonIterable.setMyInteger(1);

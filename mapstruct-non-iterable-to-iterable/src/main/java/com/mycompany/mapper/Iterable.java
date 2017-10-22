@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Iterable {
 
-
     private List<Integer> myIntegers;
     private List<String> myStrings;
 
@@ -23,6 +22,5 @@ public class Iterable {
     public void setMyStrings(List<String> myStrings) {
         this.myStrings = myStrings;
     }
-
 
 }

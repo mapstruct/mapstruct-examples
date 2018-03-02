@@ -19,3 +19,4 @@ test-output
 
 # Gradle
 .gradle
+.DS_Store

@@ -39,5 +39,7 @@
         <module>mapstruct-protobuf3</module>
         <module>mapstruct-updatemethods-1</module>
         <module>mapstruct-kotlin</module>
+        <module>mapstruct-jpa-child-parent</module>
+        <module>mapstruct-lookup-entity-with-id</module>
     </modules>
 </project>

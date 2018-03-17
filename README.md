@@ -18,6 +18,7 @@ Currently, the following examples exist:
 * _mapstruct-protobuf3_: Example on how to use protobuf3 with MapStruct
 * _mapstruct-kotlin_: Example on how to use MapStruct with Kotlin using KAPT (Kotlin Annotation Processing Tool)
 * _mapstruct-jpa-parent-child_: Example on how to use @Context in relation to parent / child relations in JPA)
+* _mapstruct-lookup-entity-with-composed-key_: Shows how an object with composite key can be read from the database in a mapping method.
 
 ## License
 

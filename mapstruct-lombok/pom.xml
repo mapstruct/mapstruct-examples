@@ -51,6 +51,14 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- IntelliJ pre 2018.1.1 requires the mapstruct processor to be present as provided dependency -->
+<!--        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${org.mapstruct.version}</version>
+            <scope>provided</scope>
+        </dependency>-->
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

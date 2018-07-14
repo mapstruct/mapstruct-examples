@@ -27,6 +27,8 @@
 
     <properties>
         <org.mapstruct.version>1.2.0.Final</org.mapstruct.version>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
     <dependencies>

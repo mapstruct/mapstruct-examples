@@ -1,0 +1,22 @@
+language: java
+
+sudo: false
+dist: trusty
+
+install: true
+
+matrix:
+  include:
+  - jdk: openjdk8
+  - jdk: oraclejdk8
+  - jdk: openjdk10
+  - jdk: openjdk11
+  - jdk: openjdk-ea
+  allow_failures:
+  - jdk: openjdk-ea
+
+script: mvn clean verify -B -V -U
+
+cache:
+  directories:
+  - $HOME/.m2

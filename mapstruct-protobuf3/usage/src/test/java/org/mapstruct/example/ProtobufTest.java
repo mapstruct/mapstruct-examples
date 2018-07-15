@@ -40,8 +40,8 @@ public class ProtobufTest {
         user.setEmail("test");
         user.getPermissions().add(Permission.ADMIN);
 
-        UserDTO.Builder dto = UserMapper.INSTANCE.map(user);
-        UserDTO deserialized = UserDTO.parseFrom(dto.build().toByteArray());
+        UserDTO dto = UserMapper.INSTANCE.map(user);
+        UserDTO deserialized = UserDTO.parseFrom(dto.toByteArray());
         User back = UserMapper.INSTANCE.map(deserialized);
 
         Assert.assertEquals("", back.getId());
@@ -57,8 +57,8 @@ public class ProtobufTest {
         user.setEmail("test");
         user.getPermissions().add(Permission.ADMIN);
 
-        UserDTO.Builder dto = UserMapper.INSTANCE.map(user);
-        UserDTO deserialized = UserDTO.parseFrom(dto.build().toByteArray());
+        UserDTO dto = UserMapper.INSTANCE.map(user);
+        UserDTO deserialized = UserDTO.parseFrom(dto.toByteArray());
         User back = UserMapper.INSTANCE.map(deserialized);
 
         Assert.assertEquals("", back.getId());

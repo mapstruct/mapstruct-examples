@@ -13,8 +13,8 @@ task wrapper(type: Wrapper) {
 }
 
 ext {
-    mapstructVersion = "1.2.0.CR1"
-    lombokVersion = "1.16.14"
+    mapstructVersion = "1.3.0.Beta1"
+    lombokVersion = "1.18.0"
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8

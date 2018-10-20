@@ -31,7 +31,7 @@ class PersonConverterTest {
         val personDto = PersonDto("Samuel", "Jackson", "0123 334466", LocalDate.of(1948, 12, 21))
 
         val person = converter.convertToModel(personDto)
-        assertThat(person).isNotNull()
+        assertThat(person).isNotNull
         assertThat(person.firstName).isEqualTo("Samuel")
         assertThat(person.lastName).isEqualTo("Jackson")
         assertThat(person.phoneNumber).isEqualTo("0123 334466")

@@ -43,5 +43,6 @@
         <module>mapstruct-lookup-entity-with-id</module>
         <module>mapstruct-metadata-with-annotations</module>
         <module>mapstruct-suppress-unmapped</module>
+        <module>mapstruct-clone</module>
     </modules>
 </project>

@@ -21,6 +21,7 @@ Currently, the following examples exist:
 * _mapstruct-jpa-parent-child_: Example on how to use @Context in relation to parent / child relations in JPA)
 * _mapstruct-suppress-unmapped_: Shows how mapping to target properties can be ignored without warning by default in a mixed scenario. However bean property mappings that have the same name will still be applied.
 * _mapstruct-lookup-entity-with-composed-key_: Shows how an object with composite key can be read from the database in a mapping method.
+* _mapstruct-clone_: Shows how an object can be deeply cloned by defining all mapping methods.
 * _mapstruct-metadata-annotations_: Demonstrates how to read annotations and use them as mapping instruction.
 
 ## License

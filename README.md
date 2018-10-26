@@ -19,6 +19,7 @@ Currently, the following examples exist:
 * _mapstruct-kotlin_: Example on how to use MapStruct with Kotlin using KAPT (Kotlin Annotation Processing Tool)
 * _mapstruct-kotlin-gradle_: Example on how to use MapStruct with Kotlin and Gradle Kotlin DSL using KAPT
 * _mapstruct-jpa-parent-child_: Example on how to use @Context in relation to parent / child relations in JPA)
+* _mapstruct-suppress-unmapped_: Shows how mapping to target properties can be ignored without warning by default in a mixed scenario. However bean property mappings that have the same name will still be applied.
 * _mapstruct-lookup-entity-with-composed-key_: Shows how an object with composite key can be read from the database in a mapping method.
 
 ## License

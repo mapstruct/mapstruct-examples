@@ -47,7 +47,8 @@ public class SourceTargetMapperTest {
         parent.setChildren( Arrays.asList( childDto1, childDto2 ) );
 
 
-        ParentEntity parentEntity = SourceTargetMapper.MAPPER.toEntity( parent );
+        ParentEntity parentEntity = new ParentEntity();
+        SourceTargetMapper.MAPPER.toEntity( parent, parentEntity );
 
         //results
         assertThat( parentEntity ).isNotNull();

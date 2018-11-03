@@ -41,6 +41,7 @@
         <module>mapstruct-kotlin</module>
         <module>mapstruct-jpa-child-parent</module>
         <module>mapstruct-lookup-entity-with-id</module>
+        <module>mapstruct-metadata-with-annotations</module>
         <module>mapstruct-suppress-unmapped</module>
     </modules>
 </project>

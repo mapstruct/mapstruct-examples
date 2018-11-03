@@ -24,6 +24,12 @@ public class TaxContext {
 
     @BeforeMapping
     public void registerAnnotationsForTarget(@TargetType Class<?> t) {
+        /* Although MapStruct is all about generating code, there is currently
+         * no means to analyse annotations runtime without reflection. One could
+         * even argue whether this is should be part of a mapping framework such
+         * as MapStruct. Hence, reflection is used in this particular place, in this
+         * example to demonstrate how to do this.
+         */
         Method[] methods = t.getMethods();
         for ( Method method : methods ) {
             for ( Annotation annotation : method.getAnnotations() ) {

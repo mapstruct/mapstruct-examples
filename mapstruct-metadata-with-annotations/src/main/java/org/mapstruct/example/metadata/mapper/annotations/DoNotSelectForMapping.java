@@ -24,8 +24,12 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import org.mapstruct.Qualifier;
 
+/**
+ * This is a qualfier with the opposite purpose. It is never used in an @Mapping and
+ * its purpose is to avoid selection of a method annotated with his qualifier
+ */
 @Qualifier
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.SOURCE)
-public @interface IgnoreMapping {
+public @interface DoNotSelectForMapping {
 }

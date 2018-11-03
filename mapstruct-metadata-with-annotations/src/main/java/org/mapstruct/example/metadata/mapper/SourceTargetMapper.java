@@ -24,14 +24,13 @@ import java.util.List;
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
 import org.mapstruct.example.metadata.dto.LegalEntity;
 import org.mapstruct.example.metadata.dto.TaxRecord;
 import org.mapstruct.example.metadata.entities.LegalEntityPE;
 import org.mapstruct.example.metadata.entities.OrganisationPE;
 import org.mapstruct.example.metadata.entities.PersonPE;
 import org.mapstruct.example.metadata.entities.TaxRecordPE;
-import org.mapstruct.example.metadata.mapper.annotations.IgnoreMapping;
+import org.mapstruct.example.metadata.mapper.annotations.DoNotSelectForMapping;
 import org.mapstruct.example.metadata.mapper.annotations.Treatment;
 import org.mapstruct.factory.Mappers;
 
@@ -62,11 +61,11 @@ public abstract class SourceTargetMapper {
         }
     }
 
-    @IgnoreMapping
+    @DoNotSelectForMapping
     @Mapping( target = "socialSecurityNumber", source = "id" )
     protected abstract PersonPE mapPerson( LegalEntity s );
 
-    @IgnoreMapping
+    @DoNotSelectForMapping
     @Mapping( target = "chamberOfCommerceNumber", source = "id" )
     protected abstract OrganisationPE mapOrganisation( LegalEntity s );
 }

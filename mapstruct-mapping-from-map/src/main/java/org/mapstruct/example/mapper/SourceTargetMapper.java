@@ -21,7 +21,6 @@ package org.mapstruct.example.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
 import org.mapstruct.example.dto.Source;
 import org.mapstruct.example.dto.Target;
 import org.mapstruct.example.mapper.util.MappingUtil;
@@ -38,9 +37,7 @@ public interface SourceTargetMapper {
 
     SourceTargetMapper MAPPER = Mappers.getMapper( SourceTargetMapper.class );
 
-    @Mappings( {
-        @Mapping(source = "map", target = "ip", qualifiedBy = Ip.class ),
-        @Mapping(source = "map", target = "server", qualifiedBy = Server.class ),
-    } )
+    @Mapping(source = "map", target = "ip", qualifiedBy = Ip.class )
+    @Mapping(source = "map", target = "server", qualifiedBy = Server.class )
     Target toTarget(Source s);
 }

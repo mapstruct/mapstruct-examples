@@ -74,12 +74,12 @@ Kotlin: https://kotlinlang.org/
 
 ## Maven Setup
 
-Add `mapstruct-jdk8` to your dependencies
+Add `mapstruct` to your dependencies
 
 ```xml
 <dependency>
   <groupId>org.mapstruct</groupId>
-  <artifactId>mapstruct-jdk8</artifactId>
+  <artifactId>mapstruct</artifactId>
   <version>${mapstruct.version}</version>
 </dependency>
 ```

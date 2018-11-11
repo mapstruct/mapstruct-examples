@@ -30,7 +30,7 @@
 
     <path id="main.classpath">
         <fileset dir="${lib.dir}">
-            <include name="org/mapstruct/mapstruct-jdk8/${mapstruct.version}/mapstruct-jdk8-${mapstruct.version}.jar" />
+            <include name="org/mapstruct/mapstruct/${mapstruct.version}/mapstruct-${mapstruct.version}.jar" />
         </fileset>
     </path>
 
@@ -47,7 +47,7 @@
             <include name="org/easytesting/fest-assert/1.4/fest-assert-1.4.jar" />
             <include name="org/easytesting/fest-util/1.1.6/fest-util-1.1.6.jar" />
             <include name="org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
-            <include name="org/mapstruct/mapstruct-jdk8/${mapstruct.version}/mapstruct-jdk8-${mapstruct.version}.jar" />
+            <include name="org/mapstruct/mapstruct/${mapstruct.version}/mapstruct-${mapstruct.version}.jar" />
         </fileset>
         <pathelement location="${classes.dir}" />
         <pathelement location="${test.classes.dir}" />

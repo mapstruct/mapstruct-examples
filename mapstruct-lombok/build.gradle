@@ -20,7 +20,7 @@ ext {
 sourceCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
-    compile "org.mapstruct:mapstruct-jdk8:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
+    compile "org.mapstruct:mapstruct:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
     testCompile 'junit:junit:4.12'
     apt "org.mapstruct:mapstruct-processor:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
 }

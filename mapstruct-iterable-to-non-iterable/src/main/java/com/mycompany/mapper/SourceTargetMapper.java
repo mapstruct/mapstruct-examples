@@ -23,7 +23,6 @@ import com.mycompany.mapper.util.IterableNonInterableUtil;
 import com.mycompany.mapper.util.LastElement;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
 
@@ -32,9 +31,7 @@ public interface SourceTargetMapper {
 
     SourceTargetMapper MAPPER = Mappers.getMapper( SourceTargetMapper.class );
 
-    @Mappings( {
-        @Mapping( source = "myIntegers", target = "myInteger", qualifiedBy = FirstElement.class ),
-        @Mapping( source = "myStrings", target = "myString", qualifiedBy = LastElement.class )
-    } )
+    @Mapping( source = "myIntegers", target = "myInteger", qualifiedBy = FirstElement.class )
+    @Mapping( source = "myStrings", target = "myString", qualifiedBy = LastElement.class )
     Target toTarget( Source s );
 }

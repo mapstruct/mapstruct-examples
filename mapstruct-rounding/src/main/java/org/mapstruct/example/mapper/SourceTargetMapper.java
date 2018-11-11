@@ -21,7 +21,6 @@ package org.mapstruct.example.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
 import org.mapstruct.example.dto.Source;
 import org.mapstruct.example.dto.Target;
 import org.mapstruct.example.mapper.util.RoundingUtil;
@@ -35,10 +34,8 @@ public interface SourceTargetMapper {
 
     SourceTargetMapper MAPPER = Mappers.getMapper( SourceTargetMapper.class );
 
-    @Mappings( {
-        @Mapping( target = "bd2", qualifiedBy = Fraction2.class ),
-        @Mapping( target = "bd3", qualifiedBy = Fraction3.class ),
-        @Mapping( target = "bdUnConstrained" )
-    } )
+    @Mapping( target = "bd2", qualifiedBy = Fraction2.class )
+    @Mapping( target = "bd3", qualifiedBy = Fraction3.class )
+    @Mapping( target = "bdUnConstrained" )
     Target toTarget( Source s );
 }

@@ -22,7 +22,6 @@ package org.mapstruct.example.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
-import org.mapstruct.Mappings;
 import org.mapstruct.example.dto.MammalDto;
 import org.mapstruct.example.dto.MammalEntity;
 import org.mapstruct.factory.Mappers;
@@ -38,8 +37,6 @@ public interface SourceTargetTestMapper {
 
     SourceTargetTestMapper MAPPER = Mappers.getMapper( SourceTargetTestMapper.class );
 
-    @Mappings({
-        @Mapping(target = "numberOfStomachs", source = "numberOfStomachs")
-    })
+    @Mapping(target = "numberOfStomachs", source = "numberOfStomachs")
     void toTarget(MammalDto source, Long numberOfStomachs, @MappingTarget MammalEntity target);
 }

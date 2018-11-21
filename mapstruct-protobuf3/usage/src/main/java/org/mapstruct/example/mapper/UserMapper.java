@@ -24,8 +24,10 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.NullValueCheckStrategy;
 import org.mapstruct.ValueMapping;
+import org.mapstruct.example.protobuf.Department;
 import org.mapstruct.example.protobuf.Permission;
 import org.mapstruct.example.protobuf.User;
+import org.mapstruct.example.protobuf.UserProtos.DepartmentDTO;
 import org.mapstruct.example.protobuf.UserProtos.PermissionDTO;
 import org.mapstruct.example.protobuf.UserProtos.UserDTO;
 import org.mapstruct.factory.Mappers;
@@ -41,9 +43,13 @@ public interface UserMapper {
 
 
     @Mapping(source = "permissions", target = "permissionsList")
+    @Mapping(source = "mainDepartments", target = "mainDepartmentsList")
+    @Mapping(source = "departments", target = "departmentsList")
     UserDTO map(User user);
 
     @Mapping(source = "permissionsList", target = "permissions")
+    @Mapping(source = "mainDepartmentsList", target = "mainDepartments")
+    @Mapping(source = "departmentsList", target = "departments")
     User map(UserDTO userDTO);
 
     @ValueMapping(source = "UNRECOGNIZED", target = MappingConstants.NULL)
@@ -51,4 +57,7 @@ public interface UserMapper {
 
     PermissionDTO map(Permission perm);
 
+
+    Department map(DepartmentDTO departmentDTO);
+    DepartmentDTO map(Department department);
 }

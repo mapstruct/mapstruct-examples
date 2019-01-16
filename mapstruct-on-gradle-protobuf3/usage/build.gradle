@@ -1,0 +1,31 @@
+apply plugin: 'com.google.protobuf'
+apply plugin: 'net.ltgt.apt'
+apply plugin: 'java'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    compile project(':spi-impl')
+    compile "org.mapstruct:mapstruct-jdk8:$mapstructVersion"
+    compile 'com.google.protobuf:protobuf-java:3.6.1'
+
+    testCompile 'junit:junit:4.12'
+    testApt "org.mapstruct:mapstruct-processor:$mapstructVersion"
+
+    apt "org.mapstruct:mapstruct-processor:$mapstructVersion"
+    apt project(':spi-impl')
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir file("${buildDir}/generated/source/proto")
+        }
+    }
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.6.1"
+    }
+}

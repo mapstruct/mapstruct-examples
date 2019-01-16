@@ -1,0 +1,4 @@
+rootProject.name = 'mapstruct-on-gradle-protobuf3'
+rootProject.buildFileName = 'build.gradle'
+include 'usage'
+include 'spi-impl'

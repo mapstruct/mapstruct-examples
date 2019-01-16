@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+
+option java_package = "org.mapstruct.example.protobuf";
+option java_outer_classname = "UserProtos";
+
+message UserDTO {
+    string id = 1;
+    string email = 2;
+    repeated PermissionDTO permissions = 3;
+    repeated DepartmentDTO main_departments  = 4;
+    repeated DepartmentDTO departments  = 5;
+}
+
+enum PermissionDTO {
+    NONE = 0;
+    USER = 1;
+    ADMIN = 2;
+}
+
+message DepartmentDTO {
+	string name = 1;
+}
+

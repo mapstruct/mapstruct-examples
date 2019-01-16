@@ -15,7 +15,10 @@
 target
 test-output
 /*/build
+/*/*/build
 /*/bin
+/*/out
+/*/*/out
 
 # Gradle
 .gradle

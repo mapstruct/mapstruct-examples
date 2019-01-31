@@ -64,13 +64,14 @@ public class ClonerTest {
             .containsExactly( tuple( "Table", 2L ) );
         assertThat( customer.getStock()  ).isNotNull();
         assertThat( customer.getStock() ).hasSize( 1 );
+
         Map.Entry<OrderItemKeyDto, OrderItemDto> entry = customer.getStock().entrySet().iterator().next();
         assertThat( entry.getKey().getStockNumber() ).isEqualTo( 5 );
         assertThat( entry.getValue().getName() ).isEqualTo( "Table" );
         assertThat( entry.getValue().getQuantity() ).isEqualTo( 2L );
 
         // check mapper really created new objects
-        assertThat( customer ).isNotEqualTo( customerDto );
+        assertThat( customer ).isNotSameAs( customerDto );
         assertThat( customer.getOrders().get( 0 ) ).isNotEqualTo( order1 );
         assertThat( entry.getKey() ).isNotEqualTo( key );
         assertThat( entry.getValue() ).isNotEqualTo( order1 );

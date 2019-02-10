@@ -28,7 +28,7 @@
     <version>1.0.0</version>
 
     <properties>
-        <org.mapstruct.version>1.3.0.Beta2</org.mapstruct.version>
+        <org.mapstruct.version>1.3.0.Final</org.mapstruct.version>
     </properties>
 
     <dependencies>

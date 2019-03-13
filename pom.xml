@@ -45,5 +45,6 @@
         <module>mapstruct-suppress-unmapped</module>
         <module>mapstruct-clone</module>
         <module>mapstruct-mapper-repo</module>
+        <module>mapstruct-quarkus</module>
     </modules>
 </project>

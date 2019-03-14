@@ -16,25 +16,10 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.mapstruct.example.quarkus.resource;
+package org.mapstruct.example.quarkus.mapper;
 
-public class PersonDto {
-    private String firstname;
-    private String surname;
+import org.mapstruct.MapperConfig;
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
+@MapperConfig(componentModel = "cdi")
+interface QuarkusMappingConfig {
 }

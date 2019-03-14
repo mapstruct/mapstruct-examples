@@ -25,8 +25,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.mapstruct.example.quarkus.mapper.PersonMapper;
-import org.mapstruct.example.quarkus.resource.PersonDto;
-import org.mapstruct.example.quarkus.service.Person;
+import org.mapstruct.example.quarkus.dto.PersonDto;
 import org.mapstruct.example.quarkus.service.PersonService;
 
 @Path("/person")

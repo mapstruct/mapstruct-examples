@@ -16,15 +16,25 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.mapstruct.example.quarkus.mapper;
+package org.mapstruct.example.quarkus.dto;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.example.quarkus.dto.PersonDto;
-import org.mapstruct.example.quarkus.service.Person;
+public class PersonDto {
+    private String firstname;
+    private String surname;
 
-@Mapper(config = QuarkusMappingConfig.class)
-public interface PersonMapper {
-    @Mapping(target = "surname", source = "lastname")
-    PersonDto toResource(Person person);
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
 }

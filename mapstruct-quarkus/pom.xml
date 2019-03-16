@@ -69,31 +69,24 @@
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>${org.mapstruct.version}</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <annotationProcessorPaths>
-            <path>
-              <groupId>org.mapstruct</groupId>
-              <artifactId>mapstruct-processor</artifactId>
-              <version>${org.mapstruct.version}</version>
-            </path>
-          </annotationProcessorPaths>
-        </configuration>
-      </plugin>
       <plugin>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
         <version>${quarkus.version}</version>
         <executions>
           <execution>
+            <id>quarkus-build</id>
             <goals>
               <goal>build</goal>
             </goals>
@@ -153,6 +146,33 @@
                 </configuration>
               </execution>
             </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- there is an issue with JDK12 and Quarkus, see https://github.com/quarkusio/quarkus/issues/1534 -->
+    <!-- so we will skip the quarkus plugin and tests for now in case jdk >= 12 -->
+    <profile>
+      <id>java12+</id>
+      <activation>
+        <jdk>[12,)</jdk>
+      </activation>
+      <properties>
+        <maven.test.skip>true</maven.test.skip>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-maven-plugin</artifactId>
+            <version>${quarkus.version}</version>
+              <executions>
+                <execution>
+                  <id>quarkus-build</id>
+                  <phase>none</phase> <!-- invalid phase to disable this execution -->
+                </execution>
+              </executions>
           </plugin>
         </plugins>
       </build>

@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.cat.map;
+package org.mapstruct.example.repo;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.cat.map.domain.Employee;
-import com.cat.map.domain.Person;
-import com.cat.map.mappers.PersonMapper;
+import org.mapstruct.example.repo.domain.Employee;
+import org.mapstruct.example.repo.domain.Person;
+import org.mapstruct.example.repo.mappers.PersonMapper;
 
 /**
  * @author jucheme

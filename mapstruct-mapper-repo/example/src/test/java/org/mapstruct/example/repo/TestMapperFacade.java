@@ -1,19 +1,19 @@
 /**
  * 
  */
-package com.cat.map;
+package org.mapstruct.example.repo;
 
 import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.cat.map.domain.Boss;
-import com.cat.map.domain.Car;
-import com.cat.map.domain.CarDto;
-import com.cat.map.domain.CarType;
-import com.cat.map.domain.Employee;
-import com.cat.map.domain.Person;
+import org.mapstruct.example.repo.domain.Boss;
+import org.mapstruct.example.repo.domain.Car;
+import org.mapstruct.example.repo.domain.CarDto;
+import org.mapstruct.example.repo.domain.CarType;
+import org.mapstruct.example.repo.domain.Employee;
+import org.mapstruct.example.repo.domain.Person;
 
 /**
  * @author jucheme
@@ -23,7 +23,7 @@ public class TestMapperFacade {
 
 	@Test
 	public void testMapToFromNew() {
-		MapperFacade mf = new MapperFacade("com.cat.map", "mark.is.cool");
+		MapperFacade mf = new MapperFacade("org.mapstruct.example.repo", "mark.is.cool");
 		Car car = new Car("Morris", 5, CarType.SPORTS);
 		Person p = new Person("mark", "juchems", "411 manor", 54L);
 
@@ -39,7 +39,7 @@ public class TestMapperFacade {
 
 	@Test
 	public void testMapObjectToObject() {
-		Mapper mf = new MapperFacade("com.cat.map");
+		Mapper mf = new MapperFacade("org.mapstruct.example.repo");
 		Car car = new Car("Morris", 5, CarType.SPORTS);
 
 		CarDto carDto = new CarDto();
@@ -54,7 +54,7 @@ public class TestMapperFacade {
 	 */
 	@Test
 	public void testMapAll() {
-		Mapper mf = new MapperFacade("com.cat.map");
+		Mapper mf = new MapperFacade("org.mapstruct.example.repo");
 		Person p = new Person("mark", "juchems", "411 manor", 54L);
 
 		List<Object> result = mf.mapAll(p);
@@ -71,7 +71,7 @@ public class TestMapperFacade {
 	 */
 	@Test
 	public void testHasRegisteredMapper() {
-		Mapper mf = new MapperFacade("com.cat.map");
+		Mapper mf = new MapperFacade("org.mapstruct.example.repo");
 
 		Assert.assertTrue(mf.hasRegisteredMapper(Car.class, CarDto.class));
 		Assert.assertFalse(mf.hasRegisteredMapper(Car.class, Person.class));

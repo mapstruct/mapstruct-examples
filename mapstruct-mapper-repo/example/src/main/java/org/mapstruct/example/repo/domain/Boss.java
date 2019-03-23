@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.cat.map.domain;
+package org.mapstruct.example.repo.domain;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
@@ -9,28 +9,28 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  * @author jucheme
  *
  */
-public class Person {
+public class Boss {
 
-	private String firstName;
-	private String lastName;
+	private String name;
+	private String title;
 	private String address;
 	private Long age;
 
-	public Person() {
+	public Boss() {
+
 	}
 
 	/**
 	 * Construct!
 	 * 
-	 * @param firstName
-	 * @param lastName
+	 * @param name
 	 * @param address
 	 * @param age
 	 */
-	public Person(String firstName, String lastName, String address, Long age) {
+	public Boss(String name, String title, String address, Long age) {
 		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.name = name;
+		this.title = title;
 		this.address = address;
 		this.age = age;
 	}
@@ -39,44 +39,25 @@ public class Person {
 	public String toString() {
 		return ToStringBuilder.reflectionToString(this);
 	}
-
 	/**
-	 * @return the firstName
+	 * @return the name
 	 */
-	public String getFirstName() {
-		return firstName;
+	public String getName() {
+		return name;
 	}
-
 	/**
-	 * @param firstName
-	 *            the firstName to set
+	 * @param name
+	 *            the name to set
 	 */
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-	/**
-	 * @return the lastName
-	 */
-	public String getLastName() {
-		return lastName;
-	}
-
-	/**
-	 * @param lastName
-	 *            the lastName to set
-	 */
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
 	/**
 	 * @return the address
 	 */
 	public String getAddress() {
 		return address;
 	}
-
 	/**
 	 * @param address
 	 *            the address to set
@@ -84,20 +65,33 @@ public class Person {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
 	/**
 	 * @return the age
 	 */
 	public Long getAge() {
 		return age;
 	}
-
 	/**
 	 * @param age
 	 *            the age to set
 	 */
 	public void setAge(Long age) {
 		this.age = age;
+	}
+
+	/**
+	 * @return the title
+	 */
+	public String getTitle() {
+		return title;
+	}
+
+	/**
+	 * @param title
+	 *            the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 }

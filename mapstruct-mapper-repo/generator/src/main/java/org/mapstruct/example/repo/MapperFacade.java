@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.cat.map;
+package org.mapstruct.example.repo;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -80,7 +80,7 @@ public class MapperFacade implements Mapper {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.cat.map.Mapper#map(java.lang.Object, java.lang.Class)
+	 * @see Mapper#map(java.lang.Object, java.lang.Class)
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
@@ -95,7 +95,7 @@ public class MapperFacade implements Mapper {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.cat.map.Mapper#map(java.lang.Object, java.lang.Object)
+	 * @see Mapper#map(java.lang.Object, java.lang.Object)
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
@@ -110,7 +110,7 @@ public class MapperFacade implements Mapper {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.cat.map.Mapper#mapAll(java.lang.Object)
+	 * @see Mapper#mapAll(java.lang.Object)
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
@@ -127,7 +127,7 @@ public class MapperFacade implements Mapper {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.cat.map.Mapper#hasRegisteredMapper(java.lang.Class,
+	 * @see Mapper#hasRegisteredMapper(java.lang.Class,
 	 * java.lang.Class)
 	 */
 	@Override

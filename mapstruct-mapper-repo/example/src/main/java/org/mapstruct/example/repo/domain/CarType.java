@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.cat.map.domain;
+package org.mapstruct.example.repo.domain;
 
 /**
  * @author jucheme

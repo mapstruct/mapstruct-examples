@@ -1,15 +1,15 @@
 /**
  * 
  */
-package com.cat.map.mappers;
+package org.mapstruct.example.repo.mappers;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.example.repo.StandardMapper;
 import org.mapstruct.factory.Mappers;
 
-import com.cat.map.StandardMapper;
-import com.cat.map.domain.Employee;
-import com.cat.map.domain.Person;
+import org.mapstruct.example.repo.domain.Employee;
+import org.mapstruct.example.repo.domain.Person;
 
 /**
  * @author jucheme

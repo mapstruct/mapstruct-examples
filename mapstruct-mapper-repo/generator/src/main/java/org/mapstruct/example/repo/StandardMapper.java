@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.cat.map;
+package org.mapstruct.example.repo;
 
 import org.mapstruct.MappingTarget;
 

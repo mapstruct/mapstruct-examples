@@ -1,16 +1,16 @@
 /**
  * 
  */
-package com.cat.map.mappers;
+package org.mapstruct.example.repo.mappers;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.example.repo.StandardMapper;
 import org.mapstruct.factory.Mappers;
 
-import com.cat.map.StandardMapper;
-import com.cat.map.domain.Car;
-import com.cat.map.domain.CarDto;
+import org.mapstruct.example.repo.domain.Car;
+import org.mapstruct.example.repo.domain.CarDto;
 
 /**
  * @author jucheme

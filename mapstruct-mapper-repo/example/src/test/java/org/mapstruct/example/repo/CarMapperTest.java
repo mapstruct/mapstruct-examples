@@ -1,16 +1,16 @@
 /**
  * 
  */
-package com.cat.map;
+package org.mapstruct.example.repo;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.mapstruct.factory.Mappers;
 
-import com.cat.map.domain.Car;
-import com.cat.map.domain.CarDto;
-import com.cat.map.domain.CarType;
-import com.cat.map.mappers.CarMapper;
+import org.mapstruct.example.repo.domain.Car;
+import org.mapstruct.example.repo.domain.CarDto;
+import org.mapstruct.example.repo.domain.CarType;
+import org.mapstruct.example.repo.mappers.CarMapper;
 
 /**
  * @author jucheme

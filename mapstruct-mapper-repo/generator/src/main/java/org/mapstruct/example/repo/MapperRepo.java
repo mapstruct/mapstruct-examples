@@ -9,7 +9,7 @@ import java.util.List;
  * @author jucheme
  *
  */
-public interface Mapper {
+public interface MapperRepo {
 
 	/**
 	 * Maps from an object to a new instance of an object.
@@ -47,4 +47,12 @@ public interface Mapper {
 	@SuppressWarnings("rawtypes")
 	boolean hasRegisteredMapper(Class from, Class to);
 
+	static MapperRepo getInstance() {
+		try {
+			return (MapperRepo)Class.forName( "org.mapstruct.example.repo.MapperRepoImpl" ).newInstance();
+		}
+		catch ( ClassNotFoundException | InstantiationException | IllegalAccessException ex ) {
+			throw new IllegalStateException( ex );
+		}
+	}
 }

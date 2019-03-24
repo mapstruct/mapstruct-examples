@@ -19,11 +19,11 @@ import org.mapstruct.example.repo.domain.Person;
  * @author jucheme
  *
  */
-public class TestMapperFacade {
+public class TestMapperRepo {
 
 	@Test
 	public void testMapToFromNew() {
-		MapperFacade mf = new MapperFacade("org.mapstruct.example.repo", "mark.is.cool");
+		MapperRepo mf = MapperRepo.getInstance();
 		Car car = new Car("Morris", 5, CarType.SPORTS);
 		Person p = new Person("mark", "juchems", "411 manor", 54L);
 
@@ -39,7 +39,7 @@ public class TestMapperFacade {
 
 	@Test
 	public void testMapObjectToObject() {
-		Mapper mf = new MapperFacade("org.mapstruct.example.repo");
+		MapperRepo mf = MapperRepo.getInstance();
 		Car car = new Car("Morris", 5, CarType.SPORTS);
 
 		CarDto carDto = new CarDto();
@@ -54,7 +54,7 @@ public class TestMapperFacade {
 	 */
 	@Test
 	public void testMapAll() {
-		Mapper mf = new MapperFacade("org.mapstruct.example.repo");
+		MapperRepo mf = MapperRepo.getInstance();
 		Person p = new Person("mark", "juchems", "411 manor", 54L);
 
 		List<Object> result = mf.mapAll(p);
@@ -71,7 +71,7 @@ public class TestMapperFacade {
 	 */
 	@Test
 	public void testHasRegisteredMapper() {
-		Mapper mf = new MapperFacade("org.mapstruct.example.repo");
+		MapperRepo mf = MapperRepo.getInstance();
 
 		Assert.assertTrue(mf.hasRegisteredMapper(Car.class, CarDto.class));
 		Assert.assertFalse(mf.hasRegisteredMapper(Car.class, Person.class));

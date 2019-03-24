@@ -6,14 +6,14 @@ import com.google.auto.value.AutoValue;
 
 @AutoValue
 public abstract class AutoValueFluentCarDto {
-    // MapStruct 1.3 does NOT work with fluent accessor style like shown here
+    // MapStruct 1.3 does NOT work with fluent accessor style getters, hence the old-fashioned getX
     @Nullable
-    public abstract String constructor();
+    public abstract String getConstructor();
 
-    public abstract int count();
+    public abstract int getSeatCount();
 
     @Nullable
-    public abstract CarType type();
+    public abstract CarType getType();
 
     public static Builder builder() {
         return new AutoValue_AutoValueFluentCarDto.Builder();
@@ -21,11 +21,11 @@ public abstract class AutoValueFluentCarDto {
 
     @AutoValue.Builder
     public abstract static class Builder {
-        public abstract Builder setConstructor(String value);
+        public abstract Builder constructor(String value);
 
-        public abstract Builder setCount(int value);
+        public abstract Builder seatCount(int value);
 
-        public abstract Builder setType(CarType value);
+        public abstract Builder type(CarType value);
 
         public abstract AutoValueFluentCarDto build();
     }

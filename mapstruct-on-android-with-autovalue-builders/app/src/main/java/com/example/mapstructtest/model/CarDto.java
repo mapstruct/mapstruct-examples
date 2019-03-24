@@ -32,9 +32,9 @@ public class CarDto {
 	@Override
 	public String toString() {
 		return "CarDto{" +
-				"constructor='" + constructor + '\'' +
-				", seatCount=" + seatCount +
-				", type='" + type + '\'' +
+				"'" + constructor + '\'' +
+				", " + seatCount +
+				", '" + type + '\'' +
 				'}';
 	}
 }

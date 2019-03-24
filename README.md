@@ -25,6 +25,12 @@ Currently, the following examples exist:
 * _mapstruct-clone_: Shows how an object can be deeply cloned by defining all mapping methods.
 * _mapstruct-metadata-annotations_: Demonstrates how to read annotations and use them as mapping instruction.
 
+# MapStruct Integration tests
+
+The integrations are also a valuable resource for inspecting how MapStruct works. Here is the entire collection if [integration test resources](https://github
+.com/mapstruct/mapstruct/tree/master/integrationtest/src/test/resources) and here is an example for [AutoValue](https://github
+.com/mapstruct/mapstruct/tree/master/integrationtest/src/test/resources/autoValueBuilderTest/src/main/java/org/mapstruct/itest/auto/value) as one of those integrations tests.
+
 ## License
 
 The examples in this project are licensed under the Apache License, Version 2.0.

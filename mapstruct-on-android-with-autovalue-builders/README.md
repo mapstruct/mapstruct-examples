@@ -6,7 +6,7 @@ This sample project originates from [Albert Beade's MapStruct test at GitHub](ht
 
 # How to run it
 
-Open this containing folder with its android gradle build files directly in Android Studio. 
+Open this containing folder with its android gradle build files directly in Android Studio.
 
 ## License
 

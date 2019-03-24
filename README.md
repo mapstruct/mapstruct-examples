@@ -14,6 +14,7 @@ Currently, the following examples exist:
 * _mapstruct-examples-field-mapping_: Shows how MapStruct can be used with "struct" like objects with public fields
 * _mapstruct-nested-bean-mappings_: Shows how to map object graphs via a main root method
 * _mapstruct-mapping-with-cycles_: Shows how to map object graphs that can contain cycles
+* _mapstruct-on-android-with-autovalue-builders_: Shows how MapStruct works with builders for immutable objects in an Android sample project.
 * _mapstruct-spi-accessor-naming_: Example on how to use the Service Provider Interface (SPI) for a custom accessor naming strategy.
 * _mapstruct-protobuf3_: Example on how to use protobuf3 with MapStruct
 * _mapstruct-kotlin_: Example on how to use MapStruct with Kotlin using KAPT (Kotlin Annotation Processing Tool)

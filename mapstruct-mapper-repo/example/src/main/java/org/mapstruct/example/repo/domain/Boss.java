@@ -3,8 +3,6 @@
  */
 package org.mapstruct.example.repo.domain;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-
 /**
  * @author jucheme
  *
@@ -35,10 +33,6 @@ public class Boss {
 		this.age = age;
 	}
 
-	@Override
-	public String toString() {
-		return ToStringBuilder.reflectionToString(this);
-	}
 	/**
 	 * @return the name
 	 */

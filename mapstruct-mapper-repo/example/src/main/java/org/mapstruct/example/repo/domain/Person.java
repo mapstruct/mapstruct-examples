@@ -3,8 +3,6 @@
  */
 package org.mapstruct.example.repo.domain;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-
 /**
  * @author jucheme
  *
@@ -33,11 +31,6 @@ public class Person {
 		this.lastName = lastName;
 		this.address = address;
 		this.age = age;
-	}
-
-	@Override
-	public String toString() {
-		return ToStringBuilder.reflectionToString(this);
 	}
 
 	/**

@@ -110,7 +110,7 @@ public class RepositoryGenerator extends AbstractProcessor {
             template.process( templateData, writer );
         }
         catch ( TemplateException | IOException ex ) {
-            ex.printStackTrace();
+            throw new IllegalStateException( ex );
         }
     }
 

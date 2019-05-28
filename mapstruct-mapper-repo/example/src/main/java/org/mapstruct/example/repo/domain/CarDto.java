@@ -3,8 +3,6 @@
  */
 package org.mapstruct.example.repo.domain;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-
 /**
  * @author jucheme
  *
@@ -37,10 +35,6 @@ public class CarDto {
 		this.type = type;
 	}
 
-	@Override
-	public String toString() {
-		return ToStringBuilder.reflectionToString(this);
-	}
 	/**
 	 * @return the make
 	 */

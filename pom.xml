@@ -44,5 +44,6 @@
         <module>mapstruct-metadata-with-annotations</module>
         <module>mapstruct-suppress-unmapped</module>
         <module>mapstruct-clone</module>
+        <module>mapstruct-mapper-repo</module>
     </modules>
 </project>

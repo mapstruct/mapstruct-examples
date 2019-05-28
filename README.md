@@ -23,6 +23,7 @@ Currently, the following examples exist:
 * _mapstruct-lookup-entity-with-composed-key_: Shows how an object with composite key can be read from the database in a mapping method.
 * _mapstruct-clone_: Shows how an object can be deeply cloned by defining all mapping methods.
 * _mapstruct-metadata-annotations_: Demonstrates how to read annotations and use them as mapping instruction.
+* _mapstruct-mappers-repo_: Demonstrates how one can build a repo of mappers by means of code generation.
 
 ## License
 

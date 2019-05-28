@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>repo-generator</artifactId>
+
+    <parent>
+        <groupId>org.mapstruct.examples.repo</groupId>
+        <artifactId>repo</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-compile</id>
+                        <configuration>
+                            <compilerArgument>-proc:none</compilerArgument>
+                            <includes>
+                                <include>org/mapstruct/example/repo/generator/RepositoryGenerator.java</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>compile-project</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

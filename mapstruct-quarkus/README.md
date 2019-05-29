@@ -7,7 +7,12 @@ The example was basically built with the following steps:
 1. Create a new Quarkus application
 
    ```
-   mvn io.quarkus:quarkus-maven-plugin:0.11.0:create -DprojectGroupId=org.mapstruct.examples.quarkus -DprojectArtifactId=mapstruct-examples-quarkus -DclassName="org.mapstruct.example.quarkus.PersonResource" -Dpath="/person" -Dextensions="resteasy-jsonb"
+   mvn io.quarkus:quarkus-maven-plugin:0.15.0:create \
+     -DprojectGroupId=org.mapstruct.examples.quarkus \
+     -DprojectArtifactId=mapstruct-examples-quarkus \
+     -DclassName="org.mapstruct.example.quarkus.PersonResource" \
+     -Dpath="/person" \
+     -Dextensions="resteasy-jsonb"
    ```
 
 2. Add the `mapstruct-processor` as a regular `provided` scoped dependency and *not* as described in the 

@@ -1,7 +1,6 @@
 language: java
 
 sudo: false
-dist: trusty
 
 install: true
 
@@ -9,8 +8,10 @@ matrix:
   include:
   - jdk: openjdk8
   - jdk: oraclejdk8
+    dist: trusty
   - jdk: openjdk11
   - jdk: openjdk12
+  - jdk: openjdk13
   - jdk: openjdk-ea
   allow_failures:
   - jdk: openjdk-ea

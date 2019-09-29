@@ -29,7 +29,7 @@
   <properties>
     <surefire-plugin.version>2.22.0</surefire-plugin.version>
     <quarkus.version>0.15.0</quarkus.version>
-    <org.mapstruct.version>1.3.0.Final</org.mapstruct.version>
+    <org.mapstruct.version>1.3.1.Final</org.mapstruct.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>

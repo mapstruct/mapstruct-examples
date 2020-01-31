@@ -18,10 +18,13 @@
  */
 package org.mapstruct.example.mapper;
 
+import com.google.protobuf.StringValue;
+import org.mapstruct.AfterMapping;
 import org.mapstruct.CollectionMappingStrategy;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
+import org.mapstruct.MappingTarget;
 import org.mapstruct.NullValueCheckStrategy;
 import org.mapstruct.ValueMapping;
 import org.mapstruct.example.protobuf.Department;
@@ -36,7 +39,8 @@ import org.mapstruct.factory.Mappers;
  * @author Thomas Kratz
  */
 @Mapper(collectionMappingStrategy = CollectionMappingStrategy.ADDER_PREFERRED,
-        nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
+        nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS,
+        uses = ProtoMapper.class)
 public interface UserMapper {
 
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
@@ -50,6 +54,7 @@ public interface UserMapper {
     @Mapping(source = "permissionsList", target = "permissions")
     @Mapping(source = "mainDepartmentsList", target = "mainDepartments")
     @Mapping(source = "departmentsList", target = "departments")
+    @Mapping(source = "alternateEmailsList", target = "alternateEmails")
     User map(UserDTO userDTO);
 
     @ValueMapping(source = "UNRECOGNIZED", target = MappingConstants.NULL)
@@ -60,4 +65,12 @@ public interface UserMapper {
 
     Department map(DepartmentDTO departmentDTO);
     DepartmentDTO map(Department department);
+    
+    @AfterMapping
+    default void after(User user, @MappingTarget final UserDTO.Builder builder) {
+        int idx = 0;
+        for (String item : user.getAlternateEmails()) {
+            builder.addAlternateEmails(idx++, StringValue.of(item));
+        }
+    }
 }

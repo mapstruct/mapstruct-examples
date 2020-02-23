@@ -32,9 +32,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>14</maven.compiler.source>
-        <maven.compiler.target>14</maven.compiler.target>
-        <maven.compiler.release>14</maven.compiler.release>
+        <java.version>14</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
         <org.mapstruct.version>1.4.0-SNAPSHOT</org.mapstruct.version>
     </properties>
 
@@ -94,6 +95,18 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>java15</id>
+            <activation>
+                <jdk>15</jdk>
+            </activation>
+            <properties>
+                <java.version>15</java.version>
+            </properties>
+        </profile>
+    </profiles>
 
     <repositories>
         <repository>

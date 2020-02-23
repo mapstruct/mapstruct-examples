@@ -1,0 +1,6 @@
+rootProject.name = 'mapstruct-examples'
+
+includeBuild 'mapstruct-kotlin-gradle'
+includeBuild 'mapstruct-lombok'
+includeBuild 'mapstruct-on-gradle'
+includeBuild 'mapstruct-on-gradle-protobuf3'

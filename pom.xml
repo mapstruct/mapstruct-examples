@@ -47,4 +47,16 @@
         <module>mapstruct-mapper-repo</module>
         <module>mapstruct-quarkus</module>
     </modules>
+
+    <profiles>
+        <profile>
+            <id>java14+</id>
+            <activation>
+                <jdk>[14,)</jdk>
+            </activation>
+            <modules>
+                <module>mapstruct-record</module>
+            </modules>
+        </profile>
+    </profiles>
 </project>

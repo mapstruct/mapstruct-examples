@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.2.71"
-    kotlin("kapt") version "1.2.71"
+    kotlin("jvm") version "1.3.61"
+    kotlin("kapt") version "1.3.61"
 }
 
 group = "org.mapstruct.examples"
@@ -13,13 +13,13 @@ repositories {
 }
 
 dependencies {
-    compile(kotlin("stdlib-jdk8"))
-    compile("org.mapstruct:mapstruct:1.3.1.Final")
+    implementation(kotlin("stdlib-jdk8"))
+    implementation("org.mapstruct:mapstruct:1.3.1.Final")
     kapt("org.mapstruct:mapstruct-processor:1.3.1.Final")
 
-    testCompile("org.junit.jupiter:junit-jupiter-api:5.3.1")
-    testCompile("org.junit.jupiter:junit-jupiter-engine:5.3.1")
-    testCompile("org.assertj:assertj-core:3.11.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.3.1")
+    testImplementation("org.assertj:assertj-core:3.11.1")
 }
 
 tasks.withType<KotlinCompile> {

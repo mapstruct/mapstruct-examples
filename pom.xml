@@ -45,7 +45,6 @@
         <module>mapstruct-suppress-unmapped</module>
         <module>mapstruct-clone</module>
         <module>mapstruct-mapper-repo</module>
-        <module>mapstruct-quarkus</module>
     </modules>
 
     <profiles>
@@ -56,6 +55,15 @@
             </activation>
             <modules>
                 <module>mapstruct-record</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>java14-</id>
+            <activation>
+                <jdk>(,14)</jdk>
+            </activation>
+            <modules>
+                <module>mapstruct-quarkus</module>
             </modules>
         </profile>
     </profiles>

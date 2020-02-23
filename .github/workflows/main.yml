@@ -1,0 +1,59 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  linux_maven:
+    strategy:
+      fail-fast: false
+      matrix:
+        java: [8, 11, 13, 14-ea, 15-ea]
+    name: 'Linux JDK ${{ matrix.java }} Maven'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+      - name: 'Set up JDK'
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ matrix.java }}
+      - name: 'Test'
+        run: ./mvnw -V -B -U clean verify
+  linux_gradle:
+    strategy:
+      fail-fast: false
+      matrix:
+        java: [8, 11]
+    name: 'Linux JDK ${{ matrix.java }} Gradle'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+      - name: 'Set up JDK'
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ matrix.java }}
+      - name: 'Test'
+        run: ./gradlew buildAll
+  windows_maven:
+    name: 'Windows'
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Set up JDK 8'
+        uses: actions/setup-java@v1
+        with:
+          java-version: 8
+      - name: 'Test'
+        run: ./mvnw -V -B -U clean verify
+  mac_maven:
+    name: 'Mac OS'
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Set up JDK 8'
+        uses: actions/setup-java@v1
+        with:
+          java-version: 8
+      - name: 'Test'
+        run: ./mvnw -V -B -U clean verify

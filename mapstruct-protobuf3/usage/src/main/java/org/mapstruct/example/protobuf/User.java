@@ -13,6 +13,7 @@ public class User {
     private List<Permission> permissions = new ArrayList<>();
     private List<Department> mainDepartments = new ArrayList<>();
     private List<Department> departments = new ArrayList<>();
+    private List<String> alternateEmails = new ArrayList<>();
 
     public String getId() {
         return id;
@@ -46,11 +47,19 @@ public class User {
 		this.departments = departments;
 	}
 
-	public List<Department> getMainDepartments() {
-		return mainDepartments;
-	}
+    public List<Department> getMainDepartments() {
+        return mainDepartments;
+    }
 
-	public void setMainDepartments(List<Department> mainDepartments) {
-		this.mainDepartments = mainDepartments;
-	}
+    public void setMainDepartments(List<Department> mainDepartments) {
+        this.mainDepartments = mainDepartments;
+    }
+    
+    public List<String> getAlternateEmails() {
+        return alternateEmails;
+    }
+
+    public void setAlternateEmails(List<String> alternateEmails) {
+        this.alternateEmails = alternateEmails;
+    }
 }

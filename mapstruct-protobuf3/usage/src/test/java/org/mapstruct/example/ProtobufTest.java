@@ -19,6 +19,7 @@
 package org.mapstruct.example;
 
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.StringValue;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mapstruct.example.mapper.UserMapper;
@@ -42,6 +43,7 @@ public class ProtobufTest {
         user.getPermissions().add(Permission.ADMIN);
         user.getMainDepartments().add(new Department("SALES"));
         user.getDepartments().add(new Department("AFTER_MARKET"));
+        user.getAlternateEmails().add("bozo@clown.com");
 
         UserDTO dto = UserMapper.INSTANCE.map(user);
         UserDTO deserialized = UserDTO.parseFrom(dto.toByteArray());
@@ -56,6 +58,8 @@ public class ProtobufTest {
 
         Assert.assertEquals(1,back.getDepartments().size());
         Assert.assertEquals("AFTER_MARKET",back.getDepartments().get(0).getName());
+
+        Assert.assertEquals("bozo@clown.com", back.getAlternateEmails().get(0));
     }
 
 

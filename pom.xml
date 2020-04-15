@@ -31,6 +31,7 @@
         <module>mapstruct-field-mapping</module>
         <module>mapstruct-iterable-to-non-iterable</module>
         <module>mapstruct-lombok</module>
+        <module>mapstruct-immutables</module>
         <module>mapstruct-mapping-from-map</module>
         <module>mapstruct-mapping-with-cycles</module>
         <module>mapstruct-nested-bean-mappings</module>

@@ -21,7 +21,6 @@ package org.mapstruct.example.mapper;
 import java.util.List;
 import java.util.Map;
 
-import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.example.dto.CustomerDto;
 import org.mapstruct.example.dto.OrderItemDto;

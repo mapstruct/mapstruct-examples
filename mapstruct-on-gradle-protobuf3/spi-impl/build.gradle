@@ -3,6 +3,6 @@ apply plugin: 'java'
 sourceCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
-    implementation "org.mapstruct:mapstruct-jdk8:$mapstructVersion"
+    implementation "org.mapstruct:mapstruct:$mapstructVersion"
     implementation "org.mapstruct:mapstruct-processor:$mapstructVersion"
 }

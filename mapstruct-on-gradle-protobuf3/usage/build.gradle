@@ -5,7 +5,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
     implementation project(':spi-impl')
-    implementation "org.mapstruct:mapstruct-jdk8:$mapstructVersion"
+    implementation "org.mapstruct:mapstruct:$mapstructVersion"
     implementation 'com.google.protobuf:protobuf-java:3.6.1'
 
     testImplementation 'junit:junit:4.12'

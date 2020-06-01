@@ -18,13 +18,9 @@
  */
 package org.mapstruct.example.mapper;
 
-import java.util.List;
-import java.util.Map;
-
 import org.mapstruct.Mapper;
+import org.mapstruct.control.DeepClone;
 import org.mapstruct.example.dto.CustomerDto;
-import org.mapstruct.example.dto.OrderItemDto;
-import org.mapstruct.example.dto.OrderItemKeyDto;
 import org.mapstruct.factory.Mappers;
 
 /**
@@ -33,18 +29,10 @@ import org.mapstruct.factory.Mappers;
  * By defining all methods, we force MapStruct to generate new objects for each mapper in stead of
  * taking shortcuts by mapping an object directly.
  */
-@Mapper
+@Mapper(mappingControl = DeepClone.class)
 public interface Cloner {
 
     Cloner MAPPER = Mappers.getMapper( Cloner.class );
 
     CustomerDto clone(CustomerDto customerDto);
-
-    List<OrderItemDto> clone(List<OrderItemDto> orders);
-
-    OrderItemDto clone(OrderItemDto order);
-
-    Map<OrderItemKeyDto, OrderItemDto> clone(Map<OrderItemKeyDto, OrderItemDto> stock);
-
-    OrderItemKeyDto clone( OrderItemKeyDto orderItemKeyDto );
 }

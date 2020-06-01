@@ -28,7 +28,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <org.mapstruct.version>1.4.0-SNAPSHOT</org.mapstruct.version>
+        <org.mapstruct.version>1.4.0.Beta1</org.mapstruct.version>
     </properties>
 
     <dependencies>

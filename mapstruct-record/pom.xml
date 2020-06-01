@@ -36,7 +36,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.release>${java.version}</maven.compiler.release>
-        <org.mapstruct.version>1.4.0-SNAPSHOT</org.mapstruct.version>
+        <org.mapstruct.version>1.4.0.Beta1</org.mapstruct.version>
     </properties>
 
 

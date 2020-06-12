@@ -7,17 +7,11 @@ Example usage of MapStruct and Kotlin with JDK-8 Bytecode. This is achieved by u
 In this example we want to map between a Person (Model) and a PersonDto (DTO).
 
 ```kotlin
-data class Person(var firstName: String?, var lastName: String?, var phoneNumber: String?, var birthdate: LocalDate?) {
-    // Necessary for MapStruct
-    constructor() : this(null, null, null, null)
-}
+data class Person(var firstName: String?, var lastName: String?, var phoneNumber: String?, var birthdate: LocalDate?)
 ```
 
 ```kotlin
-data class PersonDto(var firstName: String?, var lastName: String?, var phone: String?, var birthdate: LocalDate?) {
-    // Necessary for MapStruct
-    constructor() : this(null, null, null, null)
-}
+data class PersonDto(var firstName: String?, var lastName: String?, var phone: String?, var birthdate: LocalDate?)
 ```
 
 The MapStruct converter:

@@ -8,7 +8,7 @@ repositories {
 }
 
 ext {
-    mapstructVersion = "1.4.0.Beta1"
+    mapstructVersion = "1.4.0.Beta2"
     lombokVersion = "1.18.12"
 }
 

@@ -36,7 +36,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.release>${java.version}</maven.compiler.release>
-        <org.mapstruct.version>1.4.0.CR1</org.mapstruct.version>
+        <org.mapstruct.version>1.4.0.Final</org.mapstruct.version>
     </properties>
 
 
@@ -82,6 +82,8 @@
                             <version>${org.mapstruct.version}</version>
                         </path>
                     </annotationProcessorPaths>
+                    <source>14</source>
+                    <target>14</target>
                 </configuration>
             </plugin>
             <plugin>

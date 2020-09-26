@@ -36,13 +36,13 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
-            <version>1.4.0.CR1</version>
+            <version>1.4.0.Final</version>
         </dependency>
 
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
-            <version>1.4.0.CR1</version>
+            <version>1.4.0.Final</version>
             <scope>provided</scope>
         </dependency>
 

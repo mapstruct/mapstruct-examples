@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <org.mapstruct.version>1.4.0.CR1</org.mapstruct.version>
+        <org.mapstruct.version>1.4.0.Final</org.mapstruct.version>
     </properties>
 
     <modules>

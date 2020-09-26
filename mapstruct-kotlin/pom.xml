@@ -16,7 +16,7 @@
 
         <kotlin.version>1.2.51</kotlin.version>
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-        <mapstruct.version>1.4.0.CR1</mapstruct.version>
+        <mapstruct.version>1.4.0.Final</mapstruct.version>
     </properties>
 
     <dependencies>

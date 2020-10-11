@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 env:
   MAVEN_ARGS: >-
-    -V -B --no-transfer-progress
+    -V -B
     -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false -Dmaven.wagon.httpconnectionManager.ttlSeconds=120
 
 jobs:

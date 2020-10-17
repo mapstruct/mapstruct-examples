@@ -6,6 +6,7 @@ Currently, the following examples exist:
 
 * _mapstruct-on-ant_: Shows how to use MapStruct in Ant-based projects; to build this example, run `ant build` on the command line
 * _mapstruct-on-gradle_: Shows how to use MapStruct in Gradle-based projects; to build the example project, run `./gradlew clean build` on the command line
+* _mapstruct-immutables_: Shows how to use MapStruct together with [Immutables](https://immutables.github.io/).
 * _mapstruct-lombok_: Shows how to use MapStruct together with Lombok (with both a Maven `pom.xml` and a Gradle `build.gradle`); to build the example project, run either `mvn clean install` or `./gradlew clean build` on the command line
 * _mapstruct-iterable-non-iterable_: Shows how by means of a mapper util class conversions can be made from an iterable- to its non-iterable element
 * _mapstruct-mapping-from-map_: Shows how by means of a mapper util class and qualifiers extracting value can be carried out on Maps. Watch [mapstruct/mapstruct#1075](https://github.com/mapstruct/mapstruct/issues/1075) for native support.

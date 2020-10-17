@@ -8,7 +8,7 @@ dependencies {
     implementation "org.mapstruct:mapstruct:$mapstructVersion"
     implementation 'com.google.protobuf:protobuf-java:3.6.1'
 
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.1'
     testAnnotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"
 
     annotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"

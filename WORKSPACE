@@ -15,7 +15,7 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
     artifacts = [
-        "junit:junit:4.12",
+        "junit:junit:4.13.1",
         "org.easytesting:fest-assert:1.4",
         "org.mapstruct:mapstruct:1.3.1.Final",
         "org.mapstruct:mapstruct-processor:1.3.1.Final",

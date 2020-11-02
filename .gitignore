@@ -22,3 +22,6 @@ test-output
 
 # Gradle
 .gradle
+
+# Bazel
+**/bazel-*

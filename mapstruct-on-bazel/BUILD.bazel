@@ -1,0 +1,55 @@
+load("@rules_java//java:defs.bzl", "java_library", "java_plugin", "java_test")
+
+java_library(
+    name = "mapstruct-on-bazel",
+    srcs = glob(["src/main/java/**/*.java"]),
+    resources = glob(["src/main/resources/**"]),
+    deps = [
+        ":mapstruct",
+    ],
+)
+
+java_library(
+    name = "tests",
+    srcs = glob(["src/test/java/**/*.java"]),
+    resources = glob(["src/test/resources/**"]),
+    deps = [
+        ":mapstruct-on-bazel",
+        "@maven//:junit_junit",
+        "@maven//:org_easytesting_fest_assert",
+    ],
+)
+
+java_test(
+    name = "ConversionTest",
+    test_class = "org.mapstruct.example.ConversionTest",
+    runtime_deps = [
+        ":tests",
+    ],
+)
+
+java_library(
+    name = "mapstruct",
+    exported_plugins = [
+        ":mapstruct_plugin",
+    ],
+    neverlink = True,
+    visibility = ["//visibility:public"],
+    exports = [
+        "@maven//:org_mapstruct_mapstruct",
+        "@maven//:org_mapstruct_mapstruct_processor",
+    ],
+    runtime_deps = [
+        # add to runtime, as we need
+        "@maven//:org_mapstruct_mapstruct",
+    ],
+)
+
+java_plugin(
+    name = "mapstruct_plugin",
+    generates_api = True,
+    processor_class = "org.mapstruct.ap.MappingProcessor",
+    deps = [
+        "@maven//:org_mapstruct_mapstruct_processor",
+    ],
+)

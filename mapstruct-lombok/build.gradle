@@ -9,7 +9,8 @@ repositories {
 
 ext {
     mapstructVersion = "1.4.1.Final"
-    lombokVersion = "1.18.12"
+    lombokVersion = "1.18.16"
+    lombokMapstructBindingVersion = "0.2.0"
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -17,5 +18,5 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 dependencies {
     implementation "org.mapstruct:mapstruct:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
     testImplementation 'junit:junit:4.13.1'
-    annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}", "org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}"
 }

@@ -15,16 +15,22 @@ Currently, the following examples exist:
 * _mapstruct-examples-field-mapping_: Shows how MapStruct can be used with "struct" like objects with public fields
 * _mapstruct-nested-bean-mappings_: Shows how to map object graphs via a main root method
 * _mapstruct-mapping-with-cycles_: Shows how to map object graphs that can contain cycles
+* _mapstruct-on-android-with-autovalue-builders_: Shows how MapStruct works with builders for immutable objects in an Android sample project.
 * _mapstruct-spi-accessor-naming_: Example on how to use the Service Provider Interface (SPI) for a custom accessor naming strategy.
 * _mapstruct-protobuf3_: Example on how to use protobuf3 with MapStruct
 * _mapstruct-kotlin_: Example on how to use MapStruct with Kotlin using KAPT (Kotlin Annotation Processing Tool)
 * _mapstruct-kotlin-gradle_: Example on how to use MapStruct with Kotlin and Gradle Kotlin DSL using KAPT
-* _mapstruct-jpa-parent-child_: Example on how to use @Context in relation to parent / child relations in JPA)
+* _mapstruct-jpa-parent-child_: Example on how to use @Context in relation to parent / child relations in JPA
 * _mapstruct-suppress-unmapped_: Shows how mapping to target properties can be ignored without warning by default in a mixed scenario. However bean property mappings that have the same name will still be applied.
 * _mapstruct-lookup-entity-with-composed-key_: Shows how an object with composite key can be read from the database in a mapping method.
 * _mapstruct-clone_: Shows how an object can be deeply cloned by defining all mapping methods.
 * _mapstruct-metadata-annotations_: Demonstrates how to read annotations and use them as mapping instruction.
 * _mapstruct-mappers-repo_: Demonstrates how one can build a repo of mappers by means of code generation.
+
+# MapStruct Integration tests
+
+The integration tests are also a valuable resource for inspecting how MapStruct works. Here is the entire collection [integration test resources](https://github.com/mapstruct/mapstruct/tree/master/integrationtest/src/test/resources)
+and here is an example for [AutoValue](https://github.com/mapstruct/mapstruct/tree/master/integrationtest/src/test/resources/autoValueBuilderTest/src/main/java/org/mapstruct/itest/auto/value) as one of those integrations tests.
 
 ## License
 

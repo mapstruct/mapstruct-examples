@@ -11,8 +11,8 @@ Currently, the following examples exist:
 * _mapstruct-iterable-non-iterable_: Shows how by means of a mapper util class conversions can be made from an iterable- to its non-iterable element
 * _mapstruct-mapping-from-map_: Shows how by means of a mapper util class and qualifiers extracting value can be carried out on Maps. Watch [mapstruct/mapstruct#1075](https://github.com/mapstruct/mapstruct/issues/1075) for native support.
 * _mapstruct-rounding_: Shows how by means of a mapper util class and qualifiers roundings can be carried out on Numbers
-* _mapstruct-examples-updatemethods-1_: Shows how to update an existing target object
-* _mapstruct-examples-field-mapping_: Shows how MapStruct can be used with "struct" like objects with public fields
+* _mapstruct-updatemethods-1_: Shows how to update an existing target object
+* _mapstruct-field-mapping_: Shows how MapStruct can be used with "struct" like objects with public fields
 * _mapstruct-nested-bean-mappings_: Shows how to map object graphs via a main root method
 * _mapstruct-mapping-with-cycles_: Shows how to map object graphs that can contain cycles
 * _mapstruct-spi-accessor-naming_: Example on how to use the Service Provider Interface (SPI) for a custom accessor naming strategy.

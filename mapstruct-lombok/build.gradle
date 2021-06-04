@@ -20,8 +20,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
 
     /*
-        this example uses lombok over the annotationProcessor,
-        the io.freefair.lombok plugin is works as well.
+        this example uses lombok directly over the annotationProcessor,
+        the io.freefair.lombok plugin works as well.
         The freefair-lombok plugin is used in the example mapstruct-on-gradle-testcp-with-lombok
      */
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}", "org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}"

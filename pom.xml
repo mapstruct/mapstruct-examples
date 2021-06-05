@@ -25,7 +25,6 @@
         <module>mapstruct-spi-accessor-naming</module>
         <module>mapstruct-protobuf3</module>
         <module>mapstruct-updatemethods-1</module>
-        <module>mapstruct-kotlin</module>
         <module>mapstruct-jpa-child-parent</module>
         <module>mapstruct-lookup-entity-with-id</module>
         <module>mapstruct-metadata-with-annotations</module>
@@ -51,6 +50,19 @@
             </activation>
             <modules>
                 <module>mapstruct-quarkus</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>java16-</id>
+            <activation>
+                <jdk>(,16)</jdk>
+            </activation>
+            <modules>
+                <!--
+                    Kotlin kapt currently has problems on Java 16+.
+                    See https://youtrack.jetbrains.com/issue/KT-45545
+                 -->
+                <module>mapstruct-kotlin</module>
             </modules>
         </profile>
     </profiles>

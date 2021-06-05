@@ -9,12 +9,10 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Sample application demonstration the use of MapStruct and Kotlin</name>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <kotlin.version>1.2.51</kotlin.version>
+        <kotlin.version>1.5.10</kotlin.version>
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
     </properties>

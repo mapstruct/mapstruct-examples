@@ -1,0 +1,4 @@
+rootProject.name = 'mapstruct-on-gradle-spi-accessor-naming-strategy'
+rootProject.buildFileName = 'build.gradle'
+include 'usage'
+include 'spi-impl'

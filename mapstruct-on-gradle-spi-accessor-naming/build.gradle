@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'net.ltgt.apt' version '0.9'
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+
+    ext {
+        mapstructVersion = "1.2.0.Final"
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4'
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs = [
+            '-Amapstruct.suppressGeneratorTimestamp=true'
+    ]
+}

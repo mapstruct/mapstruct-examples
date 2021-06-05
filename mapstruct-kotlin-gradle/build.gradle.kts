@@ -22,6 +22,16 @@ dependencies {
     testImplementation("org.assertj:assertj-core:3.11.1")
 }
 
+
+kapt {
+    arguments {
+        // Set Mapstruct Configuration options here
+        // https://kotlinlang.org/docs/reference/kapt.html#annotation-processor-arguments
+        // https://mapstruct.org/documentation/stable/reference/html/#configuration-options
+        // arg("mapstruct.defaultComponentModel", "spring")
+    }
+}
+
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }

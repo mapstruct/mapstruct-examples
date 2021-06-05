@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 env:
   MAVEN_ARGS: >-
-    -V -B
+    -V -B --no-transfer-progress
     -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false -Dmaven.wagon.httpconnectionManager.ttlSeconds=120
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java: [8, 11, 13, 14-ea, 15-ea]
+        java: [8, 11, 13, 16, 17-ea]
     name: 'Linux JDK ${{ matrix.java }} Maven'
     runs-on: ubuntu-latest
     steps:

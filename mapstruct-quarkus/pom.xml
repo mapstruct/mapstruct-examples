@@ -21,10 +21,11 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <quarkus-plugin.version>1.0.1.Final</quarkus-plugin.version>
-    <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
+    <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-    <quarkus.platform.version>1.0.1.Final</quarkus.platform.version>
-    <surefire-plugin.version>2.22.1</surefire-plugin.version>
+    <quarkus.platform.version>1.13.6.Final</quarkus.platform.version>
+    <quarkus-plugin.version>1.13.6.Final</quarkus-plugin.version>
+    <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
 
     <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
   </properties>
@@ -101,6 +102,7 @@
         <configuration>
           <systemProperties>
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+            <maven.home>${maven.home}</maven.home>
           </systemProperties>
         </configuration>
       </plugin>
@@ -129,6 +131,8 @@
                 <configuration>
                   <systemProperties>
                     <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
+                    <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+                    <maven.home>${maven.home}</maven.home>
                   </systemProperties>
                 </configuration>
               </execution>

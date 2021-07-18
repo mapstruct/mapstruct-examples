@@ -8,7 +8,7 @@ repositories {
 }
 
 ext {
-    mapstructVersion = "1.4.2.Final"
+    mapstructVersion = "1.5.0.Beta1"
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -16,7 +16,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 dependencies {
     implementation "org.mapstruct:mapstruct:${mapstructVersion}"
     testImplementation "org.testng:testng:6.10", "org.easytesting:fest-assert:1.4"
-    annotationProcessor "org.mapstruct:mapstruct-processor:1.4.2.Final"
+    annotationProcessor "org.mapstruct:mapstruct-processor:1.5.0.Beta1"
 }
 
 tasks.withType(JavaCompile) {

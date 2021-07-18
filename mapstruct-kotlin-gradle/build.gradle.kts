@@ -14,8 +14,8 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("org.mapstruct:mapstruct:1.4.2.Final")
-    kapt("org.mapstruct:mapstruct-processor:1.4.2.Final")
+    implementation("org.mapstruct:mapstruct:1.5.0.Beta1")
+    kapt("org.mapstruct:mapstruct-processor:1.5.0.Beta1")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.3.1")

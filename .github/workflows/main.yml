@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java: [8, 11, 13, 16, 17-ea]
+        java: [8, 11, 13, 16, 17, 18-ea]
     name: 'Linux JDK ${{ matrix.java }} Maven'
     runs-on: ubuntu-latest
     steps:

@@ -82,7 +82,7 @@
         <profile>
             <id>java17</id>
             <activation>
-                <jdk>17-ea</jdk>
+                <jdk>17</jdk>
             </activation>
             <properties>
                 <java.version>17</java.version>

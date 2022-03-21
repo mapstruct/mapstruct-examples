@@ -27,7 +27,7 @@
     <quarkus-plugin.version>1.13.6.Final</quarkus-plugin.version>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
 
-    <org.mapstruct.version>1.5.0.Beta2</org.mapstruct.version>
+    <org.mapstruct.version>1.5.0.RC1</org.mapstruct.version>
   </properties>
 
   <dependencyManagement>

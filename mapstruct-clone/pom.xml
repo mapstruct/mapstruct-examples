@@ -16,7 +16,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <org.mapstruct.version>1.5.0.RC1</org.mapstruct.version>
+        <org.mapstruct.version>1.5.0.Final</org.mapstruct.version>
     </properties>
 
     <dependencies>

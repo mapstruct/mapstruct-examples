@@ -8,7 +8,7 @@ repositories {
 }
 
 ext {
-    mapstructVersion = "1.5.0.Final"
+    mapstructVersion = "1.5.1.Final"
     lombokVersion = "1.18.20"
     lombokMapstructBindingVersion = "0.2.0"
 }

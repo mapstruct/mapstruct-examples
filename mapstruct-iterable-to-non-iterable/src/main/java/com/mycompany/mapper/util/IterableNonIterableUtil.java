@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Sjaak Derksen
  */
-public class IterableNonInterableUtil {
+public class IterableNonIterableUtil {
 
     @FirstElement
     public <T> T first( List<T> in ) {

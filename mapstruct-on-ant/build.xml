@@ -6,7 +6,7 @@
  Licensed under the Apache License version 2.0, available at http://www.apache.org/licenses/LICENSE-2.0
 -->
 <project name="mapstruct-on-ant" default="build" basedir=".">
-    <property name="mapstruct.version" value="1.5.2.Final" />
+    <property name="mapstruct.version" value="1.5.3.Final" />
 
     <property name="src.main.dir" location="src/main/java" />
     <property name="src.test.dir" location="src/test/java" />

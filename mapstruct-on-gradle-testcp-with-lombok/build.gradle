@@ -11,10 +11,10 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
-    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
-    implementation 'org.mapstruct:mapstruct:1.5.2.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
 
-    testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
+    testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 }
 
 test {

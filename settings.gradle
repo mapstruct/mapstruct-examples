@@ -1,6 +1,8 @@
 rootProject.name = 'mapstruct-examples'
 
+if (JavaVersion.current() <= JavaVersion.VERSION_17) {
 includeBuild 'mapstruct-kotlin-gradle'
+}
 includeBuild 'mapstruct-lombok'
 includeBuild 'mapstruct-on-gradle'
 includeBuild 'mapstruct-on-gradle-protobuf3'

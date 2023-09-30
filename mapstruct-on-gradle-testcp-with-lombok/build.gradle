@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id "io.freefair.lombok" version "6.0.0-m2"
+    id "io.freefair.lombok" version "8.3"
 }
 
 repositories {
@@ -15,6 +15,10 @@ dependencies {
     implementation 'org.mapstruct:mapstruct:1.5.5.Final'
 
     testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+}
+
+lombok {
+    version = "1.18.30"
 }
 
 test {

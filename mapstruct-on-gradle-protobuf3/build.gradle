@@ -9,6 +9,6 @@ subprojects {
     }
 
     ext {
-        mapstructVersion = "1.5.5.Final"
+        mapstructVersion = "1.6.0.Beta1"
     }
 }

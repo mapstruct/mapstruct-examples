@@ -5,10 +5,13 @@
  */
 package org.mapstruct.example.dto;
 
+import lombok.Builder;
+
 /**
  *
  * @author Sjaak Derksen
  */
+@Builder
 public class FishTankDto {
 
     private FishDto fish;

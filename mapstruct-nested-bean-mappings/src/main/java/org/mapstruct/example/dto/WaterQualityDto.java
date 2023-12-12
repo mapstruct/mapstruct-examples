@@ -5,10 +5,13 @@
  */
 package org.mapstruct.example.dto;
 
+import lombok.experimental.SuperBuilder;
+
 /**
  *
  * @author Sjaak Derksen
  */
+@SuperBuilder
 public class WaterQualityDto {
 
     private WaterQualityReportDto report;

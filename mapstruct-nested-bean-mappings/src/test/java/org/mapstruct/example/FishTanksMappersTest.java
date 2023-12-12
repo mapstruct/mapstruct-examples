@@ -36,7 +36,7 @@ public class FishTanksMappersTest {
         FishTank source = createFishTank();
 
         // -- action
-        FishTankDto target = FishTankMapper.INSTANCE.map( source );
+        FishTankDto target = FishTankMapper.INSTANCE.map( source , "");
 
         // -- result
         assertThat( target.getName() ).isEqualTo( source.getName() );
@@ -78,8 +78,8 @@ public class FishTanksMappersTest {
         FishTank source = createFishTank();
 
         // -- action
-        FishTankDto target = FishTankMapper.INSTANCE.map( source );
-        FishTank source2 = FishTankMapper.INSTANCE.map( target );
+        FishTankDto target = FishTankMapper.INSTANCE.map( source ,"");
+        FishTank source2 = FishTankMapper.INSTANCE.map( target,"" );
 
         // -- result
         assertThat( source2.getName() ).isEqualTo( source.getName() );

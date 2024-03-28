@@ -1,4 +1,4 @@
-# MapStruct Examples
+# MapStruct Examples - Merge Test
 
 This repository contains examples showing how to use [MapStruct](http://mapstruct.org/), a Java annotation processor for the generation of type-safe bean mapping classes.
 

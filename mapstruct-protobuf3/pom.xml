@@ -17,9 +17,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <os.mavenplugin.version>1.4.0.Final</os.mavenplugin.version>
-        <protobuf.plugin.version>0.5.0</protobuf.plugin.version>
-        <protobuf.java.version>3.2.0</protobuf.java.version>
+        <os.mavenplugin.version>1.7.1</os.mavenplugin.version>
+        <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
+        <protobuf.java.version>4.27.3</protobuf.java.version>
         <org.mapstruct.version>1.6.0</org.mapstruct.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>

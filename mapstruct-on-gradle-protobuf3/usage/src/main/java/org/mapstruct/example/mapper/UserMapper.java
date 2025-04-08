@@ -39,7 +39,7 @@ public interface UserMapper {
     @Mapping(target = "departments", source = "departmentsList")
     User map(UserDTO userDTO);
 
-    @ValueMapping(source = "UNRECOGNIZED", target = MappingConstants.NULL)
+    @ValueMapping(target = MappingConstants.NULL, source = "UNRECOGNIZED")
     Permission map(PermissionDTO permissionDTO);
 
     PermissionDTO map(Permission perm);

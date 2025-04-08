@@ -29,14 +29,14 @@ public interface UserMapper {
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
 
-    @Mapping(source = "permissions", target = "permissionsList")
-    @Mapping(source = "mainDepartments", target = "mainDepartmentsList")
-    @Mapping(source = "departments", target = "departmentsList")
+    @Mapping(target = "permissionsList", source = "permissions")
+    @Mapping(target = "mainDepartmentsList", source = "mainDepartments")
+    @Mapping(target = "departmentsList", source = "departments")
     UserDTO map(User user);
 
-    @Mapping(source = "permissionsList", target = "permissions")
-    @Mapping(source = "mainDepartmentsList", target = "mainDepartments")
-    @Mapping(source = "departmentsList", target = "departments")
+    @Mapping(target = "permissions", source = "permissionsList")
+    @Mapping(target = "mainDepartments", source = "mainDepartmentsList")
+    @Mapping(target = "departments", source = "departmentsList")
     User map(UserDTO userDTO);
 
     @ValueMapping(source = "UNRECOGNIZED", target = MappingConstants.NULL)

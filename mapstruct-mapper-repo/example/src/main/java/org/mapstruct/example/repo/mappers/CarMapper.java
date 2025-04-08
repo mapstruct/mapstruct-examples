@@ -19,6 +19,6 @@ import org.mapstruct.example.repo.domain.CarDto;
 @Mapper(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
 public interface CarMapper extends StandardMapper<Car, CarDto> {
 
-	@Mapping(source = "numberOfSeats", target = "seatCount")
+	@Mapping(target = "seatCount", source = "numberOfSeats")
 	CarDto map(Car Car);
 }

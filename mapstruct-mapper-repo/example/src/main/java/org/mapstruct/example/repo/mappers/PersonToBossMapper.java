@@ -18,7 +18,7 @@ import org.mapstruct.example.repo.domain.Person;
 @Mapper
 public interface PersonToBossMapper extends StandardMapper<Person, Boss> {
 
-	@Mapping(source = "firstName", target = "name")
+	@Mapping(target = "name", source = "firstName")
 	@Mapping(target = "title", constant = "Boss")
 	Boss map(Person p);
 }

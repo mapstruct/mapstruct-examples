@@ -20,8 +20,8 @@ public interface CustomerMapper {
 
     CustomerMapper MAPPER = Mappers.getMapper( CustomerMapper.class );
 
-    @Mapping(source = "orders", target = "orderItems")
-    @Mapping(source = "customerName", target = "name")
+    @Mapping(target = "orderItems", source = "orders")
+    @Mapping(target = "name", source = "customerName")
     Customer toCustomer(CustomerDto customerDto);
 
     @InheritInverseConfiguration

@@ -24,7 +24,7 @@ public interface SourceTargetMapper {
 
     SourceTargetMapper MAPPER = Mappers.getMapper( SourceTargetMapper.class );
 
-    @Mapping(source = "map", target = "ip", qualifiedBy = Ip.class )
-    @Mapping(source = "map", target = "server", qualifiedBy = Server.class )
+    @Mapping(target = "ip", source = "map", qualifiedBy = Ip.class )
+    @Mapping(target = "server", source = "map", qualifiedBy = Server.class )
     Target toTarget(Source s);
 }

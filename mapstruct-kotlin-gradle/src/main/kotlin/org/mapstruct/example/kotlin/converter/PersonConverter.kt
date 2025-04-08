@@ -9,7 +9,7 @@ import org.mapstruct.example.kotlin.model.Person
 @Mapper
 interface PersonConverter {
 
-    @Mapping(source = "phoneNumber", target = "phone")
+    @Mapping(target = "phone", source = "phoneNumber")
     fun convertToDto(person: Person): PersonDto
 
     @InheritInverseConfiguration

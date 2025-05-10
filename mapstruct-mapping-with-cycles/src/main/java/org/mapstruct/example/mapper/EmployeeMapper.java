@@ -21,7 +21,7 @@ public interface EmployeeMapper {
 
     EmployeeMapper MAPPER = Mappers.getMapper( EmployeeMapper.class );
 
-    @Mapping(source = "employeeName", target = "name")
+    @Mapping(target = "name", source = "employeeName")
     Employee toEmployee(EmployeeDto employeeDto, @Context CycleAvoidingMappingContext context);
 
     @InheritInverseConfiguration

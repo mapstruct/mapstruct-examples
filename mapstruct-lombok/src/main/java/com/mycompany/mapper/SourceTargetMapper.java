@@ -17,6 +17,6 @@ public interface SourceTargetMapper {
 
     SourceTargetMapper MAPPER = Mappers.getMapper( SourceTargetMapper.class );
 
-    @Mapping( source = "test", target = "testing" )
+    @Mapping( target = "testing", source = "test" )
     Target toTarget( Source s );
 }

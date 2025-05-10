@@ -18,6 +18,6 @@ import org.mapstruct.example.repo.domain.Person;
 @Mapper
 public interface PersonMapper extends StandardMapper<Person, Employee> {
 
-	@Mapping(source = "firstName", target = "name")
+	@Mapping(target = "name", source = "firstName")
 	Employee map(Person p);
 }

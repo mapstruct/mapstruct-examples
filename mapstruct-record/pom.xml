@@ -23,7 +23,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.release>${java.version}</maven.compiler.release>
-        <org.mapstruct.version>1.6.2</org.mapstruct.version>
+        <org.mapstruct.version>1.6.3</org.mapstruct.version>
     </properties>
 
 

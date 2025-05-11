@@ -11,10 +11,10 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
-    annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.2'
-    implementation 'org.mapstruct:mapstruct:1.6.2'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'
+    implementation 'org.mapstruct:mapstruct:1.6.3'
 
-    testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.6.2'
+    testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'
 }
 
 lombok {

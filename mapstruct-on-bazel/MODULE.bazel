@@ -1,0 +1,19 @@
+module(
+    name = "mapstruct-on-bazel",
+    version = "1.0.0",
+)
+
+bazel_dep(name = "rules_java", version = "8.14.0")
+
+maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
+bazel_dep(name = "rules_jvm_external", version = "6.6")
+
+maven.install(
+    artifacts = [
+        "org.mapstruct:mapstruct:1.6.3",
+        "org.mapstruct:mapstruct-processor:1.6.3",
+        "junit:junit:4.13.2",
+        "org.assertj:assertj-core:3.27.7",
+    ],
+)
+use_repo(maven, "maven")

@@ -1,0 +1,2 @@
+# Root BUILD file for mapstruct-examples
+# The actual Bazel build is in the mapstruct-on-bazel subdirectory

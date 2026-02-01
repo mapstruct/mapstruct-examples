@@ -1,0 +1,4 @@
+mapstruct-on-bazel/bazel-bin
+mapstruct-on-bazel/bazel-out
+mapstruct-on-bazel/bazel-testlogs
+mapstruct-on-bazel/bazel-mapstruct-on-bazel

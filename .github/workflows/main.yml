@@ -70,7 +70,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java: [8, 11, 17, 21]
+        java: [11, 17, 21]
     name: 'Linux JDK ${{ matrix.java }} Bazel'
     runs-on: ubuntu-latest
     steps:
@@ -82,7 +82,7 @@ jobs:
           distribution: 'zulu'
           java-version: ${{ matrix.java }}
       - name: Setup Bazel
-        uses: bazel-contrib/setup-bazel@0.8.5
+        uses: bazel-contrib/setup-bazel@0.18.0
         with:
           # Avoid downloading Bazel every time.
           bazelisk-cache: true

@@ -31,6 +31,7 @@
         <module>mapstruct-suppress-unmapped</module>
         <module>mapstruct-clone</module>
         <module>mapstruct-mapper-repo</module>
+        <module>mapstruct-kotlin</module>
     </modules>
 
     <profiles>
@@ -50,19 +51,6 @@
             </activation>
             <modules>
                 <module>mapstruct-quarkus</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>java16-</id>
-            <activation>
-                <jdk>(,16)</jdk>
-            </activation>
-            <modules>
-                <!--
-                    Kotlin kapt currently has problems on Java 16+.
-                    See https://youtrack.jetbrains.com/issue/KT-45545
-                 -->
-                <module>mapstruct-kotlin</module>
             </modules>
         </profile>
     </profiles>

@@ -28,12 +28,16 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test-junit</artifactId>
-            <version>${kotlin.version}</version>
-            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.jetbrains</groupId>
+                    <artifactId>annotations</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.jetbrains.kotlin</groupId>
+                    <artifactId>kotlin-stdlib-common</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -47,6 +51,13 @@
             <version>3.27.7</version>
             <scope>test</scope>
         </dependency>
+        <dependency> 
+            <groupId>org.jetbrains.kotlin</groupId>  
+            <artifactId>kotlin-test</artifactId>  
+            <version>1.5.10</version>  
+            <type>jar</type>  
+            <scope>test</scope> 
+        </dependency> 
     </dependencies>
 
     <build>

@@ -10,8 +10,8 @@ maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 
 maven.install(
     artifacts = [
-        "org.mapstruct:mapstruct:1.6.3",
-        "org.mapstruct:mapstruct-processor:1.6.3",
+        "org.mapstruct:mapstruct:1.7.0.Beta1",
+        "org.mapstruct:mapstruct-processor:1.7.0.Beta1",
         "junit:junit:4.13.2",
         "org.assertj:assertj-core:3.27.7",
     ],

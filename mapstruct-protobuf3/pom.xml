@@ -20,7 +20,7 @@
         <os.mavenplugin.version>1.7.1</os.mavenplugin.version>
         <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
         <protobuf.java.version>4.27.3</protobuf.java.version>
-        <org.mapstruct.version>1.6.3</org.mapstruct.version>
+        <org.mapstruct.version>1.7.0.Beta1</org.mapstruct.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>

@@ -14,7 +14,7 @@
 
         <kotlin.version>2.3.0</kotlin.version>
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-        <mapstruct.version>1.6.3</mapstruct.version>
+        <mapstruct.version>1.7.0.Beta1</mapstruct.version>
     </properties>
 
     <dependencies>
@@ -74,6 +74,11 @@
                                     <groupId>org.mapstruct</groupId>
                                     <artifactId>mapstruct-processor</artifactId>
                                     <version>${mapstruct.version}</version>
+                                </annotationProcessorPath>
+                                <annotationProcessorPath>
+                                    <groupId>org.jetbrains.kotlin</groupId>
+                                    <artifactId>kotlin-metadata-jvm</artifactId>
+                                    <version>${kotlin.version}</version>
                                 </annotationProcessorPath>
                             </annotationProcessorPaths>
                         </configuration>
